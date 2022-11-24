@@ -12,6 +12,7 @@ import screenshotGitLab from '@/images/screenshots/gitlab.png'
 import screenshotGit from '@/images/screenshots/git.png'
 import screenshotTerraform from '@/images/screenshots/terraform.png'
 import screenshotKubernetes from '@/images/screenshots/kubernetes.png'
+import screenshotGrafana from '@/images/screenshots/grafana.png'
 
 import logoTerraform from '@/images/logos/tools/terraform.svg'
 import logoGit from '@/images/logos/tools/git.svg'
@@ -64,7 +65,7 @@ const features = [
       'Organize all of your contacts, service providers, and invoices in one place.',
     description:
       'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
-    image: screenshotContacts,
+    image: screenshotGrafana,
     icon: logoGrafana,
   },
   {
