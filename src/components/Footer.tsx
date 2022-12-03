@@ -19,7 +19,7 @@ export function Footer() {
           </nav>
         </div> */}
         <div className="py-4">
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 gap-y-6 lg:grid-cols-4 lg:gap-4">
             <div>
               <h4 className="text-lg font-medium" >Vojtech Mares</h4>
               <ul className="list-none mt-4">
