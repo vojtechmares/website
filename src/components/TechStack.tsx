@@ -3,7 +3,7 @@ import Image, { StaticImageData } from 'next/image'
 import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 
-import { Container } from './Container'
+import { Container } from '@/components/Container'
 
 import screenshotContacts from '@/images/screenshots/contacts.png'
 

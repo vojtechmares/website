@@ -1,8 +1,8 @@
 import Link from "next/link"
 
-import { NavLink } from "./NavLink";
-import { Container } from "./Container"
-import { Button } from "./Button"
+import { NavLink } from "@/components/NavLink";
+import { Container } from "@/components/Container"
+import { Button } from "@/components/Button"
 
 export function Header() {
   return (
