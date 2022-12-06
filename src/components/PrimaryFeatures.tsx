@@ -1,62 +1,29 @@
-import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
-import screenshotExpenses from '@/images/screenshots/contacts.png'
-import screenshotPayroll from '@/images/screenshots/contacts.png'
-import screenshotReporting from '@/images/screenshots/contacts.png'
-import screenshotVatReturns from '@/images/screenshots/contacts.png'
 
-const features = [
+const steps = [
   {
-    title: 'Analyze your needs',
-    description:
-      "Set up an environment for your developers to crete, experiment and collaborate with others to develop the best version of your application possible.",
-    image: screenshotPayroll,
+    name: 'Analýza současného stavu',
+    description: 'Zjistíme kde jsou slabá místa vaší infrastruktury nebo aplikace, a nebo obojího.',
   },
   {
-    title: 'Design a solution',
-    description:
-      "Build an automated pipeline which manages the lifecycle of the application from building, testing up to deploying to production, even on fridays.",
-    image: screenshotExpenses,
+    name: 'Návrh řešení',
+    description: 'Navrhnu, jak tato slabá místa odstranit, na co si dát pozor a naplánujeme případné další kroky. ',
   },
   {
-    title: 'Build it',
-    description:
-      "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
-    image: screenshotVatReturns,
+    name: 'Implementace',
+    description: 'Přesunu vaši aplikaci do Kubernetes, ať na vašem vlastním hardware nebo v public cloudu. Celá infrastruktura bude jasně deklarovaná jako kód pomocí Terraformu.',
   },
   {
-    title: 'Train your team',
-    description:
-      'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
-    image: screenshotReporting,
+    name: 'Proškolení vašeho týmu',
+    description: 'Naučím váš tým používat moderní technologie, tak abyste mohli rozvíjet vaší aplikaci a byznys a technologie byly nástrojem k rozvoji, ne břemenem, které s sebou táhnete.',
   },
 ]
 
 export function PrimaryFeatures() {
-  let [tabOrientation, setTabOrientation] = useState('horizontal')
-
-  useEffect(() => {
-    let lgMediaQuery = window.matchMedia('(min-width: 1024px)')
-
-    type MediaQueryChangeProps = { matches: any }
-
-    function onMediaQueryChange({ matches }: MediaQueryChangeProps) {
-      setTabOrientation(matches ? 'vertical' : 'horizontal')
-    }
-
-    onMediaQueryChange(lgMediaQuery)
-    lgMediaQuery.addEventListener('change', onMediaQueryChange)
-
-    return () => {
-      lgMediaQuery.removeEventListener('change', onMediaQueryChange)
-    }
-  }, [])
-
   return (
     <section
       id="features"
@@ -74,82 +41,34 @@ export function PrimaryFeatures() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            From zero to cloud.
+            Z nuly do cloudu.
           </h2>
           <p className="mt-6 text-lg tracking-tight text-blue-100">
-            Well everything you need, from start to finish.
+            Vše co budete potřebovat, od začátku až do cíle.
           </p>
         </div>
-        <Tab.Group
-          as="div"
-          className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
-          vertical={tabOrientation === 'vertical'}
-        >
-          {({ selectedIndex }) => (
-            <>
-              <div className="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
-                <Tab.List className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
-                  {features.map((feature, featureIndex) => (
-                    <div
-                      key={feature.title}
-                      className={clsx(
-                        'group relative rounded-full py-1 px-4 lg:rounded-r-none lg:rounded-l-xl lg:p-6',
-                        selectedIndex === featureIndex
-                          ? 'bg-white lg:bg-white/10 lg:ring-1 lg:ring-inset lg:ring-white/10'
-                          : 'hover:bg-white/10 lg:hover:bg-white/5'
-                      )}
-                    >
-                      <h3>
-                        <Tab
-                          className={clsx(
-                            'font-display text-lg [&:not(:focus-visible)]:focus:outline-none',
-                            selectedIndex === featureIndex
-                              ? 'text-blue-600 lg:text-white'
-                              : 'text-blue-100 hover:text-white lg:text-white'
-                          )}
-                        >
-                          <span className="absolute inset-0 rounded-full lg:rounded-r-none lg:rounded-l-xl" />
-                          {feature.title}
-                        </Tab>
-                      </h3>
-                      <p
-                        className={clsx(
-                          'mt-2 hidden text-sm lg:block',
-                          selectedIndex === featureIndex
-                            ? 'text-white'
-                            : 'text-blue-100 group-hover:text-white'
-                        )}
-                      >
-                        {feature.description}
-                      </p>
-                    </div>
-                  ))}
-                </Tab.List>
-              </div>
-              <Tab.Panels className="lg:col-span-7">
-                {features.map((feature) => (
-                  <Tab.Panel key={feature.title} unmount={false}>
-                    <div className="relative sm:px-6 lg:hidden">
-                      <div className="absolute -inset-x-4 top-[-6.5rem] bottom-[-4.25rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
-                      <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">
-                        {feature.description}
-                      </p>
-                    </div>
-                    <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
-                      <Image
-                        className="w-full"
-                        src={feature.image}
-                        alt=""
-                        priority
-                        sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
-                      />
-                    </div>
-                  </Tab.Panel>
-                ))}
-              </Tab.Panels>
-            </>
-          )}
-        </Tab.Group>
+        <nav aria-label="Progress">
+          <ol role="list" className="overflow-hidden pt-2 mt-20 max-w-3xl mx-auto">
+            {steps.map((step, stepIdx) => (
+              <li key={step.name} className={clsx(stepIdx !== steps.length - 1 ? 'pb-10' : '', 'relative')}>
+                {stepIdx !== steps.length - 1 ? (
+                  <div className="absolute top-4 left-6 -ml-px mt-0.5 h-full w-0.5 bg-white" aria-hidden="true" />
+                ) : null}
+                <div className="group relative flex items-start">
+                  <span className="flex h-9 items-center" aria-hidden="true">
+                    <span className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border-2 border-blue-600 bg-white">
+                      <span className="h-3 w-3 rounded-full bg-blue-600" />
+                    </span>
+                  </span>
+                  <span className="ml-4 flex min-w-0 flex-col">
+                    <span className="text-2xl text-white font-normal">{step.name}</span>
+                    <span className="text-lg text-blue-200">{step.description}</span>
+                  </span>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </nav>
       </Container>
     </section>
   )

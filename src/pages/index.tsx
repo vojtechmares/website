@@ -25,7 +25,7 @@ export default function Home() {
       <main>
         <Header />
         <Hero />
-        {/* <PrimaryFeatures /> */}
+        <PrimaryFeatures />
         <TechStack />
         <CallToAction />
         <Environment />
