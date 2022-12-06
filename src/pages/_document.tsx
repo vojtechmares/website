@@ -6,7 +6,7 @@ export default function Document(props: any) {
   return (
     <Html
       className="h-full scroll-smooth bg-white antialiased [font-feature-settings:'ss01']"
-      lang="en"
+      lang="cs"
     >
       <Head>
         {/* <link rel="preconnect" href="https://fonts.googleapis.com" />

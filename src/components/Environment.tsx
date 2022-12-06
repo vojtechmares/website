@@ -1,6 +1,4 @@
 import Image from 'next/image'
-import { Tab } from '@headlessui/react'
-import clsx from 'clsx'
 
 import { Container } from './Container'
 
@@ -8,80 +6,78 @@ import logoKubernetes from '@/images/logos/tools/kubernetes.svg'
 import logok3s from '@/images/logos/tools/k3s.svg'
 import logoRancher from '@/images/logos/tools/rancher.svg'
 import logoAWS from '@/images/logos/tools/amazonaws.svg'
-import logoOpenStack from '@/images/logos/tools/openstack.svg'
 import logoDigitalOcean from '@/images/logos/tools/digitalocean.svg'
 import logovmware from '@/images/logos/tools/vmware.svg'
-import logoGCP from '@/images/logos/tools/googlecloud.svg'
 
 const features = [
   {
     name: 'Kubernetes',
-    summary: 'Stay on top of things with always up-to-date reporting features.',
+    summary: 'Open Source systém pro automatizaci deploymentů, škálování a správu kontejnerizovaných aplikací.',
     description:
-      'We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.',
+      'Kubernetes je na platformě nezávislý systém, díky kterému může běžet vaše aplikace u vás v datacentru, v public cloudu nebo třeba v okrajových lokalitách, a nebo třeba na všech najednou, bez problému.',
     icon: logoKubernetes,
     iconColor: '#326CE5',
   },
   {
-    name: 'k3s',
+    name: 'k3s & rke2',
     summary:
-      'Never lose track of what’s in stock with accurate inventory tracking.',
+      'k3s: lehká distrubuce Kubernetes; rke2: Kubernetes do vašeho datacentra.',
     description:
-      'We don’t offer this as part of our software but that statement is inarguably true. Accurate inventory tracking would help you for sure.',
+      'k3s i rke2 jsou velice snadno instalovatelné distribuce Kubernetes, které můžete nainstalovat úplně všude a přitom mít stále k dispozici celý Kubernetes ekosystém, bez kompromisů.',
     icon: logok3s,
     iconColor: '#FFC61C',
   },
   {
     name: 'Rancher',
     summary:
-      'Organize all of your contacts, service providers, and invoices in one place.',
+      'Kubernetes jako služba, ve vašem datacentru.',
     description:
-      'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
+      'Platforma, pro vaše Kubernetes clustery. Komplexní řešení celého životního cyklu clusteru. Neřešte každodení problémy, nechte je řešit Rancher řešit za vás.',
     icon: logoRancher,
     iconColor: '#0075A8',
   },
   {
     name: 'AWS',
     summary:
-      'Organize all of your contacts, service providers, and invoices in one place.',
+      'Největší veřejný cloud. Máte problém? AWS má na to službu.',
     description:
-      'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
+      'Amazon Web Services (AWS) je cloudový poskytovatel služeb, včetně ukládání obrovských objemů dat, výpočetního výkonu a sítí. To vše aby pomohli firmám i jednotlivcům růst. AWS je nejrozšířenější poskytovatel, který je cenově dostupný, flexibilní cesta, jak stavět a provozovat aplikace a služby.',
     icon: logoAWS,
     iconColor: '#232F3E',
   },
-  {
-    name: 'Google Cloud Platform',
-    summary:
-      'Organize all of your contacts, service providers, and invoices in one place.',
-    description:
-      'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
-    icon: logoGCP,
-    iconColor: '#4285F4',
-  },
+  // {
+  //   name: 'Google Cloud Platform',
+  //   summary:
+  //     'Organize all of your contacts, service providers, and invoices in one place.',
+  //   description:
+  //     'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
+  //   icon: logoGCP,
+  //   iconColor: '#4285F4',
+  // },
   {
     name: 'DigitalOcean',
     summary:
-      'Organize all of your contacts, service providers, and invoices in one place.',
+      'Jednoduchý cloudový poskytovatel, ve kterém se neztratíte.',
     description:
-      'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
+      'DigitalOcean patří k menším cloudovým poskytovatelům, avšak jejich portfolio vám pro vaši aplikaci bohatě stačí a nebudete se ztrácet v komplexitě velkých poskytovatelů se spoustou služeb.',
     icon: logoDigitalOcean,
     iconColor: '#0080FF',
   },
+  // {
+  //   name: 'OpenStack',
+  //   summary:
+  //     'Organize all of your contacts, service providers, and invoices in one place.',
+  //   description:
+  //     'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
+  //   icon: logoOpenStack,
+  //   iconColor: '#ED1944',
+  // },
   {
-    name: 'OpenStack',
+    name: 'VMware',
     summary:
-      'Organize all of your contacts, service providers, and invoices in one place.',
+      'Populární řešení pro správu vaše datacentra, od virtuálních serverů až po úložiště.',
     description:
-      'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
-    icon: logoOpenStack,
-    iconColor: '#ED1944',
-  },
-  {
-    name: 'VMWare',
-    summary:
-      'Organize all of your contacts, service providers, and invoices in one place.',
-    description:
-      'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
+      'VMware je virtualizační platforma, která umožňuje vytvářet a spravovat virtuální servery a jejich fyzickém hardwaru. Zároveň umožňuje vytvářet oddělená prostředí například pro vývoj a ostrý provoz, tak i pro zcela různé aplikace.',
     icon: logovmware,
     iconColor: '#607078',
   },
@@ -116,7 +112,9 @@ function Feature({ feature, className, ...props }: FeatureProps) {
       <p className="mt-2 font-display text-xl text-slate-900">
         {feature.summary}
       </p>
-      <p className="mt-4 text-sm text-slate-600">{feature.description}</p>
+      <p className="mt-4 text-sm text-slate-600">
+        {feature.description}
+      </p>
     </div>
   )
 }
@@ -157,10 +155,10 @@ export function Environment() {
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            Any platform, anywhere
+          Jakákoliv platforma, kdekoliv
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            From public cloud, over on premise to edge solutions, it is all fine. I&apos;ve got you covered.
+            Od veřejného cloudu přes on-premise až po serverless, se vším vám poradím.
           </p>
         </div>
         <FeaturesMobile />

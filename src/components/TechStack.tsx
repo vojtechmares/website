@@ -5,75 +5,73 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 
-import screenshotContacts from '@/images/screenshots/contacts.png'
 
 import screenshotArgoCD from '@/images/screenshots/argocd.png'
 import screenshotGitLab from '@/images/screenshots/gitlab.png'
-import screenshotGit from '@/images/screenshots/git.png'
 import screenshotTerraform from '@/images/screenshots/terraform.png'
 import screenshotKubernetes from '@/images/screenshots/kubernetes.png'
 import screenshotGrafana from '@/images/screenshots/grafana.png'
+import screenshotPrometheus from '@/images/screenshots/prometheus.png'
 
 import logoTerraform from '@/images/logos/tools/terraform.svg'
 import logoGit from '@/images/logos/tools/git.svg'
 import logoKubernetes from '@/images/logos/tools/kubernetes.svg'
 import logoPrometheus from '@/images/logos/tools/prometheus.svg'
 import logoArgo from '@/images/logos/tools/argo.svg'
-import logoGitLab from '@/images/logos/tools/gitlab.svg'
 import logoGrafana from '@/images/logos/tools/grafana.svg'
 
 
 const features = [
   {
-    name: 'Version Control',
+    name: 'Verzování',
     summary:
-      'Never lose track of what’s in stock with accurate inventory tracking.',
+      'Spravujte svůj kód pomocí verzovacího nástroje Git.',
     description:
-      'We don’t offer this as part of our software but that statement is inarguably true. Accurate inventory tracking would help you for sure.',
+      'Mějte historii změn v aplikaci od začátku až do dnes, můžete se kdykoliv vrátit do bodu v čase. Řešte konflikty včas, předtím než je nasadíte do produkce a umožněte vaším programátorům spolupracovat na jednou, aniž by si překáželi.',
     image: screenshotGitLab,
     icon: logoGit,
   },
   {
-    name: 'Infrastructure as code',
-    summary: 'Stay on top of things with always up-to-date reporting features.',
+    name: 'Infastruktura jako kód',
+    summary: 'Mějte vaši infrastrukturu deklarativně definovanou a verzovanou, díky Terraformu.',
     description:
-      'We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.',
+      'Vaši infrastrukturu můžete snadno přesunout k jinému poskytovateli, a nebo jen vytvořit nové prostředí pro zákazníka, aby si váš produkt vyzkoušel a to během minut.',
     image: screenshotTerraform,
     icon: logoTerraform,
   },
   {
-    name: 'Orchestration',
+    name: 'Orchestrace',
     summary:
-      'Organize all of your contacts, service providers, and invoices in one place.',
+      'Nechte vaši aplikaci běžet napříč mnoha servery a škálovat dle potřeb.',
     description:
-      'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
+      'Kubernetes se stalo nejen standardem, ale i hlavní platformou pro vývoj aplikací ať SaaS nebo dodávaných třetím stranám. Jde o skvělou platformu pro provoz vaší aplikace ať ve veřejném cloudu nebo na vlastním hardwaru popř. on edge blízko koncových uživatelů.',
     image: screenshotKubernetes,
     icon: logoKubernetes,
   },
   {
     name: 'Monitoring',
     summary:
-      'Organize all of your contacts, service providers, and invoices in one place.',
+      'Sledujte Vaši aplikaci, jak se chová v čase.',
     description:
-      'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
-    image: screenshotContacts,
+      'Prometheus je standard pro monitoring aplikací, ať v Kubernetes ale i mimo. Sbírejte telemetrická data v čase o vaši aplikaci. Vyhodnoťte, kde má vaše aplikace slabá místa. Zároveň můžete tvořit pravidla, dle kterých vás AlertManager upozorní, když se něco pokazí.',
+    image: screenshotPrometheus,
     icon: logoPrometheus,
   },
   {
-    name: 'Visualization',
+    name: 'Vizualizace',
     summary:
-      'Organize all of your contacts, service providers, and invoices in one place.',
+      'Od grafů zatížení procesoru po počet otevřených TCP spojení, vše jasně a přehledně.',
     description:
-      'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
+      'Grafana je skvělý nástroj pro vizualizaci dat z monitoringu, vytvořte si dashboardy pro jednotlivé části vaší aplikace, mějte pohromadě infrastrukturu, provoz na síti, dostupnost a třeba počet neúspěšných pokusů o přihlášení, zda vůči vaší aplikaci neprobíhá hackerský útok.',
     image: screenshotGrafana,
     icon: logoGrafana,
   },
   {
     name: 'GitOps',
     summary:
-      'Organize all of your contacts, service providers, and invoices in one place.',
+      'Spravujte stav Vašich prostředí deklarativně, ať vždy víte, jaký je aktuální stav.',
     description:
-      'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
+      'ArgoCD je spolehlivý nástroj pro práci s Kubernetes a nasazováním změn a přitom si udržovat přehled o právě nasazených aplikacích, verzím a konfiguraci, snadno, soplehlivě, verzovaně.',
     image: screenshotArgoCD,
     icon: logoArgo,
   },
@@ -208,11 +206,11 @@ export function TechStack() {
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            The open source DevOps stack
+            Open Source DevOps stack
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Because you’d probably be a little confused if we suggested you
-            complicate your everyday business tasks instead.
+            Věřím v Open Source technologie, prakticky všichni je denně využíváme
+            a jsou naší budoucností.
           </p>
         </div>
         <FeaturesMobile />

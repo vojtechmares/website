@@ -19,16 +19,16 @@ export function CallToAction() {
         unoptimized
       />
       <Container className="relative">
-        <div className="mx-auto max-w-lg text-center">
+        <div className="mx-auto max-w-xl text-center">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
-            Deploy your app today
+            Posuňte svoji aplikaci už dnes
           </h2>
           <p className="mt-4 text-lg tracking-tight text-white">
-            It’s time to step up your infrastructure. Your infrastructure should bring your
-            application to the world, not to hold it back.
+            Je na čase pozvednout vaši infrastrukturu na dnešní standardy.
+            Vaše infrastruktura by měla nabídnout Vaši aplikaci světu, ne ji držet zpátky.
           </p>
-          <Button href="/contact" color="white" className="mt-10">
-            Schedule a 30 minute call
+          <Button href="https://calendly.com/vojtechmares/30min" color="white" className="mt-10">
+            Domluvme si schůzku
           </Button>
         </div>
       </Container>

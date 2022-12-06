@@ -9,19 +9,10 @@ export function Footer() {
   return (
     <footer className="bg-slate-50">
       <Container className="py-8">
-        {/* <div className="py-8">
-          <nav className="mt-10 text-sm" aria-label="quick links">
-            <div className="-my-1 flex justify-center gap-x-6">
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
-            </div>
-          </nav>
-        </div> */}
         <div className="py-4">
           <div className="grid grid-cols-1 gap-y-6 lg:grid-cols-4 lg:gap-4">
             <div>
-              <h4 className="text-lg font-medium" >Vojtech Mares</h4>
+              <h4 className="text-lg font-medium" >Vojtěch Mareš</h4>
               <ul className="list-none mt-4">
                 <li>
                   <Link href="tel:+420732490651" className="underline">+420 732 490 651</Link>
@@ -60,8 +51,17 @@ export function Footer() {
               </ul> */}
             </div>
             <div>
-              <h3 className="text-lg font-medium">Important links</h3>
+              <h3 className="text-lg font-medium">Důležité odkazy</h3>
               <ul className="mt-4 list-disc pl-4">
+                {/* <li>
+                  <Link
+                    href="https://devops-skoelni.cz/?utm_source=vojtechmares&utm_medium=vojtechmares-com-website&utm_content=link"
+                    className="underline"
+                    target="_blank"
+                  >
+                    DevOps-Skoleni.cz
+                  </Link>
+                </li> */}
                 <li>
                   <Link
                     href="https://skoleni.io/?utm_source=vojtechmares&utm_medium=vojtechmares-com-website&utm_content=link"
@@ -83,13 +83,13 @@ export function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-medium">Are you interested?</h3>
+              <h3 className="text-lg font-medium">Zaujal jsem vás?</h3>
               <p className="mt-4">
-                Are you not sure what to choose or how can I help?
-                Feel free to ask so we can find a best solution.
+                Zaujal jsem vás avšak nevíte, jak přesně bych vám mohl pomoci?
+                Nebojte se zeptat a společně vymyslíme, jak vám mohu pomoci.
               </p>
-              <Button href="/contact" className="mt-5">
-                Schedule a 30 minute call
+              <Button href="https://calendly.com/vojtechmares/30min" className="mt-5">
+                Domluvme si schůzku
               </Button>
             </div>
           </div>
@@ -100,7 +100,7 @@ export function Footer() {
               href="https://www.linkedin.com/in/vojtech-mares/"
               target="_blank"
               className="group"
-              aria-label="Vojtech Mares on LinkedIn"
+              aria-label="Vojta Mareš na LinkedIn"
             >
               <svg
                 // role="img"
@@ -116,7 +116,7 @@ export function Footer() {
               href="https://twitter.com/vojtechmares_"
               target="_blank"
               className="group"
-              aria-label="Vojtech Mares on Twitter"
+              aria-label="Vojta Mareš na Twitter"
             >
               <svg
                 aria-hidden="true"
@@ -129,7 +129,7 @@ export function Footer() {
               href="https://github.com/vojtechmares"
               target="_blank"
               className="group"
-              aria-label="Vojtech Mares on GitHub"
+              aria-label="Vojta Mareš na GitHub"
             >
               <svg
                 aria-hidden="true"
@@ -140,8 +140,7 @@ export function Footer() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-slate-500 sm:mt-0">
-            Copyright &copy; {new Date().getFullYear()} Vojtech Mares. All rights
-            reserved.
+            Copyright &copy; {new Date().getFullYear()} Vojtěch Mareš. Všechna práva vyhrazena.
           </p>
         </div>
       </Container>

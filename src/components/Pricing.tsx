@@ -27,12 +27,11 @@ type PlanProps = {
   price: string,
   description: string,
   href: string,
-  features: string[],
   featured?: boolean,
   buttonText?: string
 }
 
-function Plan({ name, price, description, href, features, featured = false, buttonText = 'Book me' }: PlanProps) {
+function Plan({ name, price, description, href, featured = false, buttonText = 'Napište mi' }: PlanProps) {
   return (
     <section
       className={clsx(
@@ -52,20 +51,6 @@ function Plan({ name, price, description, href, features, featured = false, butt
       >
         {description}
       </p>
-      {/* <ul
-        role="list"
-        className={clsx(
-          'order-last mt-10 flex flex-col gap-y-3 text-sm',
-          featured ? 'text-white' : 'text-slate-200'
-        )}
-      >
-        {features.map((feature) => (
-          <li key={feature} className="flex">
-            <CheckIcon className={featured ? 'text-white' : 'text-slate-400'} />
-            <span className="ml-4">{feature}</span>
-          </li>
-        ))}
-      </ul> */}
       <Button
         href={href}
         variant={featured ? 'solid' : 'outline'}
@@ -91,9 +76,9 @@ export function Pricing() {
           <h3 className="font-display text-xl tracking-tight text-white sm:text-4xl">
             <span className="relative whitespace-nowrap">
               <SwirlyDoodle className="absolute top-1/2 left-0 h-[1em] w-full fill-blue-400" />
-              <span className="relative">What can I do,</span>
+              <span className="relative">Co pro Vás,</span>
             </span>{' '}
-            for you.
+            můžu udělat.
           </h3>
           <p className="mt-4 text-lg text-slate-400">
             It doesn’t matter what size your company is, we will find a way to help you.
@@ -101,47 +86,25 @@ export function Pricing() {
         </div>
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           <Plan
-            name="Consultation"
-            price="2 000 CZK per hour"
-            description="Define your needs, find unoptimized parts of your application and infrastructure."
-            href="/contact"
-            features={[
-              'Send 10 quotes and invoices',
-              'Connect up to 2 bank accounts',
-              'Track up to 15 expenses per month',
-              'Manual payroll support',
-              'Export up to 3 reports',
-            ]}
+            name="Konzultace"
+            price="2 000 CZK za hodinu"
+            description="Chcete se poradit nebo si nevíte rady? Projdeme Váš současný stav a najdeme kde je problém a navrhneme řešení."
+            href="mailto:iam@vojtechmares.com"
           />
           <Plan
             featured
-            name="In-house training"
-            price="25 000 CZK per training day"
-            description="Teach your team from the basics to the best tools out there."
-            href="/contact"
-            features={[
-              'Send 25 quotes and invoices',
-              'Connect up to 5 bank accounts',
-              'Track up to 50 expenses per month',
-              'Automated payroll support',
-              'Export up to 12 reports',
-              'Bulk reconcile transactions',
-              'Track in multiple currencies',
-            ]}
+            name="Firemní školení"
+            price="24 000 CZK za jednodenní školení"
+            description="Jednoduše, s názornými příklady, které si každý vyzkouší. Naučím váš tým nové technologii nebo prohloubíme stávající znalosti."
+            href="/skoleni"
+            buttonText="Seznam školení"
           />
           <Plan
-            name="Implementation"
-            price="Find a right price for you"
-            description="For even the biggest enterprise companies."
-            href="/contact"
-            features={[
-              'Send unlimited quotes and invoices',
-              'Connect up to 15 bank accounts',
-              'Track up to 200 expenses per month',
-              'Automated payroll support',
-              'Export up to 25 reports, including TPS',
-            ]}
-            buttonText="Schedule a 30 minute call"
+            name="Implementace"
+            price="Cena dohodou"
+            description="Analyzujeme vaši situaci, projdeme možnosti, vybereme nejlepší řešení a společně jej nasadíme."
+            href="https://calendly.com/vojtechmares/30min"
+            buttonText="Domluvme si schůzku"
           />
         </div>
       </Container>

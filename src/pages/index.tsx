@@ -15,17 +15,17 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Vojtech Mares - DevOps consultant, lector, engineer</title>
+        <title>Vojtěch Mareš - DevOps konzultant, lektor, engineer</title>
 
         <meta
           name="description"
-          content="Vojtech Mares - DevOps consultant, lector, engineer"
+          content="Vojtěch Mareš - DevOps konzultant, lektor, engineer"
         />
       </Head>
       <main>
         <Header />
         <Hero />
-        <PrimaryFeatures />
+        {/* <PrimaryFeatures /> */}
         <TechStack />
         <CallToAction />
         <Environment />
