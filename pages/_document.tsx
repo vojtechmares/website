@@ -26,7 +26,7 @@ export default function Document(props: any) {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
-        <script defer data-domain="vojtamares.cz" src="https://plausible.io/js/script.js"></script>
+        <script defer data-domain="vojtechmares.com" src="https://plausible.io/js/script.js"></script>
       </Head>
       <body className="flex h-full flex-col">
         <Main />
