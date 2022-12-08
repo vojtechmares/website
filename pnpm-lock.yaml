@@ -4,7 +4,7 @@ specifiers:
   '@babel/core': ^7.20.2
   '@headlessui/react': ^1.7.4
   '@types/node': ^17.0.45
-  '@types/react': 18.0.17
+  '@types/react': 18.0.26
   autoprefixer: ^10.4.13
   clsx: ^1.2.1
   eslint: 7.32.0
@@ -29,7 +29,7 @@ dependencies:
 devDependencies:
   '@babel/core': 7.20.2
   '@types/node': 17.0.45
-  '@types/react': 18.0.17
+  '@types/react': 18.0.26
   autoprefixer: 10.4.13_postcss@8.4.19
   eslint: 7.32.0
   eslint-config-next: 13.0.4_77fvizpdb3y4icyeo2mf4eo7em
@@ -500,8 +500,8 @@ packages:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: true
 
-  /@types/react/18.0.17:
-    resolution: {integrity: sha512-38ETy4tL+rn4uQQi7mB81G7V1g0u2ryquNmsVIOKUAEIDK+3CUjZ6rSRpdvS99dNBnkLFL83qfmtLacGOTIhwQ==}
+  /@types/react/18.0.26:
+    resolution: {integrity: sha512-hCR3PJQsAIXyxhTNSiDFY//LhnMZWpNNr5etoCqx/iUfGc5gXWtQR2Phl908jVR6uPXacojQWTg4qRpkxTuGug==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
