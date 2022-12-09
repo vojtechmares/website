@@ -100,7 +100,7 @@ export function Footer() {
               href="https://www.linkedin.com/in/vojtech-mares/"
               target="_blank"
               className="group"
-              aria-label="Vojta Mareš na LinkedIn"
+              aria-label="Vojtěch Mareš na LinkedIn"
             >
               <svg
                 // role="img"
@@ -116,7 +116,7 @@ export function Footer() {
               href="https://twitter.com/vojtechmares_"
               target="_blank"
               className="group"
-              aria-label="Vojta Mareš na Twitter"
+              aria-label="Vojtěch Mareš na Twitter"
             >
               <svg
                 aria-hidden="true"
@@ -129,7 +129,7 @@ export function Footer() {
               href="https://github.com/vojtechmares"
               target="_blank"
               className="group"
-              aria-label="Vojta Mareš na GitHub"
+              aria-label="Vojtěch Mareš na GitHub"
             >
               <svg
                 aria-hidden="true"

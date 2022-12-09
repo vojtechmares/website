@@ -12,7 +12,7 @@ export function Header() {
           <nav className="relative z-50 flex justify-between">
             <div className="flex items-center md:gap-x-12">
               <span className="text-2xl font-bold">
-                <Link href="/">Vojta Mareš</Link>
+                <Link href="/">Vojtěch Mareš</Link>
               </span>
               <div className="hidden md:flex md:gap-x-6">
                 {/* <NavLink href="#how-can-i-help">Jak vám můžu pomoci?</NavLink> */}
