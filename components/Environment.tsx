@@ -103,7 +103,7 @@ function Feature({ feature, className, ...props }: FeatureProps) {
       className={className}
       {...props}
     >
-      <Image src={feature.icon} className="w-32 rounded-lg p-2" color={feature.iconColor} alt="" />
+      <Image src={feature.icon} className="rounded-lg p-2" width="128" height="128" color={feature.iconColor} alt="" />
       <h3
         className="mt-6 text-lg font-medium text-blue-600"
       >

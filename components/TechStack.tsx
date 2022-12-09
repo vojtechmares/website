@@ -98,8 +98,9 @@ function Feature({ feature, isActive, className, ...props }: FeatureProps ) {
       className={clsx(className, !isActive && 'opacity-75 hover:opacity-100')}
       {...props}
     >
-      <Image src={feature.icon} className={clsx(
-          'w-32 rounded-lg p-2 flex justify-center',
+      <Image src={feature.icon} width="128" height="128" className={clsx(
+          // 'w-32',
+          'rounded-lg p-2 flex justify-center',
           // isActive ? 'fill-blue-600' : 'fill-slate-500'
         )} alt="" />
       <h3
@@ -131,7 +132,9 @@ function FeaturesMobile() {
                 className="w-full"
                 src={feature.image}
                 alt=""
-                sizes="52.75rem"
+                // sizes="52.75rem"
+                width="800"
+                height="500"
               />
             </div>
           </div>
@@ -182,7 +185,9 @@ function FeaturesDesktop() {
                       className="w-full"
                       src={feature.image}
                       alt=""
-                      sizes="52.75rem"
+                      // sizes="52.75rem"
+                      width="800"
+                      height="500"
                     />
                   </div>
                 </Tab.Panel>
