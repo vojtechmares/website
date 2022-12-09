@@ -134,7 +134,7 @@ function FeaturesMobile() {
                 alt=""
                 // sizes="52.75rem"
                 width="800"
-                height="500"
+                height="548"
               />
             </div>
           </div>
@@ -187,7 +187,7 @@ function FeaturesDesktop() {
                       alt=""
                       // sizes="52.75rem"
                       width="800"
-                      height="500"
+                      height="548"
                     />
                   </div>
                 </Tab.Panel>
