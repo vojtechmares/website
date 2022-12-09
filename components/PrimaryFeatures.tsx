@@ -34,8 +34,9 @@ export function PrimaryFeatures() {
         className="absolute top-1/2 left-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
         src={backgroundImage}
         alt=""
-        width={2245}
-        height={1636}
+        width={1920}
+        height={1400}
+        loading="eager"
       />
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">

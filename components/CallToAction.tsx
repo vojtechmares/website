@@ -14,8 +14,9 @@ export function CallToAction() {
         className="absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
         src={backgroundImage}
         alt=""
-        width={2347}
-        height={1244}
+        width={1920}
+        height={1015}
+        loading="eager"
       />
       <Container className="relative">
         <div className="mx-auto max-w-xl text-center">
