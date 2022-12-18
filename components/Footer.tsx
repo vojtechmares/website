@@ -31,24 +31,21 @@ export function Footer() {
               </ul>
             </div>
             <div>
-              {/* <h3 className="text-lg font-medium">Most favorite courses</h3>
+              <h3 className="text-lg font-medium">Nejblíbenější školení</h3>
               <ul className="mt-4 list-disc pl-4">
                 <li>
-                  <Link href="#" className="underline">Kubernetes</Link>
+                  <Link href="/skoleni/kubernetes" className="underline">Kubernetes</Link>
                 </li>
+                {/* <li>
+                  <Link href="/skoleni/gitlab-ci" className="underline">GitLab CI</Link>
+                </li> */}
                 <li>
-                  <Link href="#" className="underline">GitLab CI</Link>
+                  <Link href="/skoleni/terraform" className="underline">Terraform</Link>
                 </li>
-                <li>
-                  <Link href="#" className="underline">Docker</Link>
-                </li>
-                <li>
-                  <Link href="#" className="underline">Terraform</Link>
-                </li>
-                <li>
-                  <Link href="#" className="underline">Rancher</Link>
-                </li>
-              </ul> */}
+                {/* <li>
+                  <Link href="/skoleni/rancher" className="underline">Rancher</Link>
+                </li> */}
+              </ul>
             </div>
             <div>
               <h3 className="text-lg font-medium">Důležité odkazy</h3>

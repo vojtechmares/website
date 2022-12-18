@@ -2,8 +2,36 @@ import Head from "next/head";
 
 import { Header } from "@/components/Header"
 import { Footer } from '@/components/Footer'
+import { getAllTraining } from "@/lib/cms/training";
+import TrainingType from "@/types/training";
+import { TrainingListGrid } from "@/components/TrainingListGrid";
 
-export default function Home() {
+export const getStaticProps = async () => {
+  const allTraining = getAllTraining([
+    'name',
+    'slug',
+    'logo',
+    'description',
+    'days',
+    'weight',
+    'featured',
+    'new',
+    'draft',
+  ])
+
+  return {
+    props: { allTraining },
+  }
+}
+
+type Props = {
+  allTraining: TrainingType[]
+}
+
+const TrainingList = ({ allTraining }: Props) => {
+  // remove drafts
+  const trainingList = allTraining.filter((val) => !val.draft)
+
   return (
     <>
       <Head>
@@ -16,9 +44,11 @@ export default function Home() {
       </Head>
       <main>
         <Header />
-        <h1 className="text-4xl mx-auto w-12 my-8">Připravuji</h1>
+        <TrainingListGrid trainingList={trainingList} />
       </main>
       <Footer />
     </>
   );
 }
+
+export default TrainingList
