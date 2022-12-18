@@ -3,7 +3,11 @@ name: Terraform
 priceOpen: 5900
 priceCompany: 24000
 logo: /images/logos/terraform.png
-description: "ArgoCD je GitOps nastroj kterym nasazujeme aplikace do Kubernetes. Pracuje na zaklade deklaraticnich konfiguracnich souboru, ktete si stahuje z Gitu. To znamena, ze vse co commitneme do repozitare, se na nasadi do Kubernetes. O vsech zmenach: co, kdy, kdo udelal budeme mit prehledne zaznami v Gitu."
+description: "Terraform je nástroj, který se používá ke správě infrastruktury v cloudu, jak veřejném (AWS, Azure, GCP), tak privátním (OpenStack, VMware vSphere).
+
+Terraform Vám umožní spravovat infrastruktutru jako kód, to znamená verzovanou v Gitu, přidávání resources pomocí merge (pull) requestů a mnoho dalších výhod. Infrastrukturu můžete dále nasadit do testovacího prostředí přesně tak, jako je v produkci bez zbytečného úsilí. O všech komponentách máte přehled a můžete predikovat ceny. Konec klikání infrastruktury, zkuste Terraform.
+
+Terraform umožnuje spravovat více cloudových providerů současne, zároveň umožnuje pracovat s hibridními cloudy (část v privátním cloudu, část ve veřejném)."
 days: 1
 featured: true
 weight: 31
