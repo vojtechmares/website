@@ -21,12 +21,12 @@ export const Training = ({ training }: Props) => {
           <Container className="flex justify-around">
             <Image
               src={training.logo}
-              className="h-40 w-40 rounded-full"
+              className="h-32 w-32 rounded-full"
               width="1500"
               height="1500"
               alt=""
             />
-            <h2 className="font-display self-center text-4xl tracking-tight text-white sm:text-6xl">
+            <h2 className="ml-4 text-center font-display self-center text-4xl tracking-tight text-white sm:text-6xl">
               Školení {training.name}
             </h2>
           </Container>
