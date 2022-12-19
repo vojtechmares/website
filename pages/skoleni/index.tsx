@@ -1,41 +1,43 @@
 import Head from "next/head";
 
-import { Header } from "@/components/Header"
-import { Footer } from '@/components/Footer'
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { getAllTraining } from "@/lib/cms/training";
 import TrainingType from "@/types/training";
 import { TrainingListGrid } from "@/components/TrainingListGrid";
 
 export const getStaticProps = async () => {
   const allTraining = getAllTraining([
-    'name',
-    'slug',
-    'logo',
-    'description',
-    'days',
-    'weight',
-    'featured',
-    'new',
-    'draft',
-  ])
+    "name",
+    "slug",
+    "logo",
+    "description",
+    "days",
+    "weight",
+    "featured",
+    "new",
+    "draft",
+  ]);
 
   return {
     props: { allTraining },
-  }
-}
+  };
+};
 
 type Props = {
-  allTraining: TrainingType[]
-}
+  allTraining: TrainingType[];
+};
 
 const TrainingList = ({ allTraining }: Props) => {
   // remove drafts
-  const trainingList = allTraining.filter((val) => !val.draft)
+  const trainingList = allTraining.filter((val) => !val.draft);
 
   return (
     <>
       <Head>
-        <title>Moje školení | Vojtěch Mareš - DevOps konzultant, lektor, engineer</title>
+        <title>
+          Moje školení | Vojtěch Mareš - DevOps konzultant, lektor, engineer
+        </title>
 
         <meta
           name="description"
@@ -49,6 +51,6 @@ const TrainingList = ({ allTraining }: Props) => {
       <Footer />
     </>
   );
-}
+};
 
-export default TrainingList
+export default TrainingList;

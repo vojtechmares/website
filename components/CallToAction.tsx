@@ -1,8 +1,8 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-call-to-action.jpg'
+import { Button } from "@/components/Button";
+import { Container } from "@/components/Container";
+import backgroundImage from "@/images/background-call-to-action.jpg";
 
 export function CallToAction() {
   return (
@@ -24,14 +24,19 @@ export function CallToAction() {
             Posuňte svoji aplikaci už dnes
           </h2>
           <p className="mt-4 text-lg tracking-tight text-white">
-            Je na čase pozvednout vaši infrastrukturu na dnešní standardy.
-            Vaše infrastruktura by měla nabídnout Vaši aplikaci světu, ne ji držet zpátky.
+            Je na čase pozvednout vaši infrastrukturu na dnešní standardy. Vaše
+            infrastruktura by měla nabídnout Vaši aplikaci světu, ne ji držet
+            zpátky.
           </p>
-          <Button href="https://calendly.com/vojtechmares/30min" color="white" className="mt-10">
+          <Button
+            href="https://calendly.com/vojtechmares/30min"
+            color="white"
+            className="mt-10"
+          >
             Domluvme si schůzku
           </Button>
         </div>
       </Container>
     </section>
-  )
+  );
 }

@@ -1,8 +1,8 @@
-import Link from "next/link"
+import Link from "next/link";
 
 import { NavLink } from "@/components/NavLink";
-import { Container } from "@/components/Container"
-import { Button } from "@/components/Button"
+import { Container } from "@/components/Container";
+import { Button } from "@/components/Button";
 
 export function Header() {
   return (
@@ -19,15 +19,16 @@ export function Header() {
                 <NavLink href="/skoleni">Školení</NavLink>
                 {/* <NavLink href="/pripadove-studie">Případové studie</NavLink> */}
                 <NavLink href="https://vojtechmares.blog/">Blog</NavLink>
-            </div>
+              </div>
             </div>
             <div className="flex items-center gap-x-5 md:gap-x-8">
-            <Button href="mailto:iam@vojtechmares.com" color="blue">
-              <span className="text-lg">
-                Napište mi <span className="hidden lg:inline">ještě dnes</span>
-              </span>
-            </Button>
-          </div>
+              <Button href="mailto:iam@vojtechmares.com" color="blue">
+                <span className="text-lg">
+                  Napište mi{" "}
+                  <span className="hidden lg:inline">ještě dnes</span>
+                </span>
+              </Button>
+            </div>
           </nav>
         </Container>
       </header>

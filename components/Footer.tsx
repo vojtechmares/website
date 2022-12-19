@@ -1,9 +1,9 @@
-import Link from 'next/link'
+import Link from "next/link";
 
-import { Container } from '@/components/Container'
+import { Container } from "@/components/Container";
 // import { Logo } from '@/components/Logo'
 // import { NavLink } from '@/components/NavLink'
-import { Button } from '@/components/Button'
+import { Button } from "@/components/Button";
 
 export function Footer() {
   return (
@@ -12,20 +12,29 @@ export function Footer() {
         <div className="py-4">
           <div className="grid grid-cols-1 gap-y-6 lg:grid-cols-4 lg:gap-4">
             <div>
-              <h4 className="text-lg font-medium" >Vojtěch Mareš</h4>
-              <ul className="list-none mt-4">
+              <h4 className="text-lg font-medium">Vojtěch Mareš</h4>
+              <ul className="mt-4 list-none">
                 <li>
-                  <Link href="tel:+420732490651" className="underline">+420 732 490 651</Link>
+                  <Link href="tel:+420732490651" className="underline">
+                    +420 732 490 651
+                  </Link>
                 </li>
                 <li>
-                  <Link href="mailto:iam@vojtechmares.com" className="underline">iam@vojtechmares.com</Link>
+                  <Link
+                    href="mailto:iam@vojtechmares.com"
+                    className="underline"
+                  >
+                    iam@vojtechmares.com
+                  </Link>
                 </li>
                 <li className="mt-4">
-                  Company ID<br />
+                  Company ID
+                  <br />
                   <code id="company-id">06999280</code>
                 </li>
                 <li className="mt-2">
-                  VAT ID<br />
+                  VAT ID
+                  <br />
                   <code id="vat-id">CZ9709180063</code>
                 </li>
               </ul>
@@ -34,13 +43,17 @@ export function Footer() {
               <h3 className="text-lg font-medium">Nejblíbenější školení</h3>
               <ul className="mt-4 list-disc pl-4">
                 <li>
-                  <Link href="/skoleni/kubernetes" className="underline">Kubernetes</Link>
+                  <Link href="/skoleni/kubernetes" className="underline">
+                    Kubernetes
+                  </Link>
                 </li>
                 {/* <li>
                   <Link href="/skoleni/gitlab-ci" className="underline">GitLab CI</Link>
                 </li> */}
                 <li>
-                  <Link href="/skoleni/terraform" className="underline">Terraform</Link>
+                  <Link href="/skoleni/terraform" className="underline">
+                    Terraform
+                  </Link>
                 </li>
                 {/* <li>
                   <Link href="/skoleni/rancher" className="underline">Rancher</Link>
@@ -85,7 +98,10 @@ export function Footer() {
                 Zaujal jsem vás avšak nevíte, jak přesně bych vám mohl pomoci?
                 Nebojte se zeptat a společně vymyslíme, jak vám mohu pomoci.
               </p>
-              <Button href="https://calendly.com/vojtechmares/30min" className="mt-5">
+              <Button
+                href="https://calendly.com/vojtechmares/30min"
+                className="mt-5"
+              >
                 Domluvme si schůzku
               </Button>
             </div>
@@ -106,7 +122,7 @@ export function Footer() {
                 aria-hidden="true"
                 className="h-6 w-6 fill-slate-500 group-hover:fill-slate-700"
               >
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
               </svg>
             </Link>
             <Link
@@ -137,10 +153,11 @@ export function Footer() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-slate-500 sm:mt-0">
-            Copyright &copy; {new Date().getFullYear()} Vojtěch Mareš. Všechna práva vyhrazena.
+            Copyright &copy; {new Date().getFullYear()} Vojtěch Mareš. Všechna
+            práva vyhrazena.
           </p>
         </div>
       </Container>
     </footer>
-  )
+  );
 }

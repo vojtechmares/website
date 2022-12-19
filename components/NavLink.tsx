@@ -1,12 +1,12 @@
-import { ReactNode } from 'react';
-import Link from 'next/link';
+import { ReactNode } from "react";
+import Link from "next/link";
 
 type Props = {
-  href: string,
-  children: ReactNode,
-}
+  href: string;
+  children: ReactNode;
+};
 
-export function NavLink({href, children}: Props) {
+export function NavLink({ href, children }: Props) {
   return (
     <Link
       href={href}

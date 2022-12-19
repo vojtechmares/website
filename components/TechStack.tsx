@@ -1,122 +1,125 @@
-import { ReactNode } from 'react'
-import Image, { StaticImageData } from 'next/image'
-import { Tab } from '@headlessui/react'
-import clsx from 'clsx'
+import { ReactNode } from "react";
+import Image, { StaticImageData } from "next/image";
+import { Tab } from "@headlessui/react";
+import clsx from "clsx";
 
-import { Container } from '@/components/Container'
+import { Container } from "@/components/Container";
 
+import screenshotArgoCD from "@/images/screenshots/argocd.png";
+import screenshotGitLab from "@/images/screenshots/gitlab.png";
+import screenshotTerraform from "@/images/screenshots/terraform.png";
+import screenshotKubernetes from "@/images/screenshots/kubernetes.png";
+import screenshotGrafana from "@/images/screenshots/grafana.png";
+import screenshotPrometheus from "@/images/screenshots/prometheus.png";
 
-import screenshotArgoCD from '@/images/screenshots/argocd.png'
-import screenshotGitLab from '@/images/screenshots/gitlab.png'
-import screenshotTerraform from '@/images/screenshots/terraform.png'
-import screenshotKubernetes from '@/images/screenshots/kubernetes.png'
-import screenshotGrafana from '@/images/screenshots/grafana.png'
-import screenshotPrometheus from '@/images/screenshots/prometheus.png'
-
-import logoTerraform from '@/images/logos/tools/terraform.svg'
-import logoGit from '@/images/logos/tools/git.svg'
-import logoKubernetes from '@/images/logos/tools/kubernetes.svg'
-import logoPrometheus from '@/images/logos/tools/prometheus.svg'
-import logoArgo from '@/images/logos/tools/argo.svg'
-import logoGrafana from '@/images/logos/tools/grafana.svg'
-
+import logoTerraform from "@/images/logos/tools/terraform.svg";
+import logoGit from "@/images/logos/tools/git.svg";
+import logoKubernetes from "@/images/logos/tools/kubernetes.svg";
+import logoPrometheus from "@/images/logos/tools/prometheus.svg";
+import logoArgo from "@/images/logos/tools/argo.svg";
+import logoGrafana from "@/images/logos/tools/grafana.svg";
 
 const features = [
   {
-    name: 'Verzování',
-    summary:
-      'Spravujte svůj kód pomocí verzovacího nástroje Git.',
+    name: "Verzování",
+    summary: "Spravujte svůj kód pomocí verzovacího nástroje Git.",
     description:
-      'Mějte historii změn v aplikaci od začátku až do dnes, můžete se kdykoliv vrátit do bodu v čase. Řešte konflikty včas, předtím než je nasadíte do produkce a umožněte vaším programátorům spolupracovat na jednou, aniž by si překáželi.',
+      "Mějte historii změn v aplikaci od začátku až do dnes, můžete se kdykoliv vrátit do bodu v čase. Řešte konflikty včas, předtím než je nasadíte do produkce a umožněte vaším programátorům spolupracovat na jednou, aniž by si překáželi.",
     image: screenshotGitLab,
     icon: logoGit,
   },
   {
-    name: 'Infastruktura jako kód',
-    summary: 'Mějte vaši infrastrukturu deklarativně definovanou a verzovanou, díky Terraformu.',
+    name: "Infastruktura jako kód",
+    summary:
+      "Mějte vaši infrastrukturu deklarativně definovanou a verzovanou, díky Terraformu.",
     description:
-      'Vaši infrastrukturu můžete snadno přesunout k jinému poskytovateli, a nebo jen vytvořit nové prostředí pro zákazníka, aby si váš produkt vyzkoušel a to během minut.',
+      "Vaši infrastrukturu můžete snadno přesunout k jinému poskytovateli, a nebo jen vytvořit nové prostředí pro zákazníka, aby si váš produkt vyzkoušel a to během minut.",
     image: screenshotTerraform,
     icon: logoTerraform,
   },
   {
-    name: 'Orchestrace',
+    name: "Orchestrace",
     summary:
-      'Nechte vaši aplikaci běžet napříč mnoha servery a škálovat dle potřeb.',
+      "Nechte vaši aplikaci běžet napříč mnoha servery a škálovat dle potřeb.",
     description:
-      'Kubernetes se stalo nejen standardem, ale i hlavní platformou pro vývoj aplikací ať SaaS nebo dodávaných třetím stranám. Jde o skvělou platformu pro provoz vaší aplikace ať ve veřejném cloudu nebo na vlastním hardwaru popř. on edge blízko koncových uživatelů.',
+      "Kubernetes se stalo nejen standardem, ale i hlavní platformou pro vývoj aplikací ať SaaS nebo dodávaných třetím stranám. Jde o skvělou platformu pro provoz vaší aplikace ať ve veřejném cloudu nebo na vlastním hardwaru popř. on edge blízko koncových uživatelů.",
     image: screenshotKubernetes,
     icon: logoKubernetes,
   },
   {
-    name: 'Monitoring',
-    summary:
-      'Sledujte Vaši aplikaci, jak se chová v čase.',
+    name: "Monitoring",
+    summary: "Sledujte Vaši aplikaci, jak se chová v čase.",
     description:
-      'Prometheus je standard pro monitoring aplikací, ať v Kubernetes ale i mimo. Sbírejte telemetrická data v čase o vaši aplikaci. Vyhodnoťte, kde má vaše aplikace slabá místa. Zároveň můžete tvořit pravidla, dle kterých vás AlertManager upozorní, když se něco pokazí.',
+      "Prometheus je standard pro monitoring aplikací, ať v Kubernetes ale i mimo. Sbírejte telemetrická data v čase o vaši aplikaci. Vyhodnoťte, kde má vaše aplikace slabá místa. Zároveň můžete tvořit pravidla, dle kterých vás AlertManager upozorní, když se něco pokazí.",
     image: screenshotPrometheus,
     icon: logoPrometheus,
   },
   {
-    name: 'Vizualizace',
+    name: "Vizualizace",
     summary:
-      'Od grafů zatížení procesoru po počet otevřených TCP spojení, vše jasně a přehledně.',
+      "Od grafů zatížení procesoru po počet otevřených TCP spojení, vše jasně a přehledně.",
     description:
-      'Grafana je skvělý nástroj pro vizualizaci dat z monitoringu, vytvořte si dashboardy pro jednotlivé části vaší aplikace, mějte pohromadě infrastrukturu, provoz na síti, dostupnost a třeba počet neúspěšných pokusů o přihlášení, zda vůči vaší aplikaci neprobíhá hackerský útok.',
+      "Grafana je skvělý nástroj pro vizualizaci dat z monitoringu, vytvořte si dashboardy pro jednotlivé části vaší aplikace, mějte pohromadě infrastrukturu, provoz na síti, dostupnost a třeba počet neúspěšných pokusů o přihlášení, zda vůči vaší aplikaci neprobíhá hackerský útok.",
     image: screenshotGrafana,
     icon: logoGrafana,
   },
   {
-    name: 'GitOps',
+    name: "GitOps",
     summary:
-      'Spravujte stav Vašich prostředí deklarativně, ať vždy víte, jaký je aktuální stav.',
+      "Spravujte stav Vašich prostředí deklarativně, ať vždy víte, jaký je aktuální stav.",
     description:
-      'ArgoCD je spolehlivý nástroj pro práci s Kubernetes a nasazováním změn a přitom si udržovat přehled o právě nasazených aplikacích, verzím a konfiguraci, snadno, soplehlivě, verzovaně.',
+      "ArgoCD je spolehlivý nástroj pro práci s Kubernetes a nasazováním změn a přitom si udržovat přehled o právě nasazených aplikacích, verzím a konfiguraci, snadno, soplehlivě, verzovaně.",
     image: screenshotArgoCD,
     icon: logoArgo,
   },
-]
+];
 
 type FeatureType = {
-  name: string|ReactNode,
-  summary: string,
-  description: string,
-  image: StaticImageData,
-  icon: any,
-}
+  name: string | ReactNode;
+  summary: string;
+  description: string;
+  image: StaticImageData;
+  icon: any;
+};
 
 type FeatureProps = {
-  feature: FeatureType,
-  isActive: boolean,
-  className?: string,
-  props?: any,
-}
+  feature: FeatureType;
+  isActive: boolean;
+  className?: string;
+  props?: any;
+};
 
-function Feature({ feature, isActive, className, ...props }: FeatureProps ) {
+function Feature({ feature, isActive, className, ...props }: FeatureProps) {
   return (
     <div
-      className={clsx(className, !isActive && 'opacity-75 hover:opacity-100')}
+      className={clsx(className, !isActive && "opacity-75 hover:opacity-100")}
       {...props}
     >
-      <Image src={feature.icon} width="128" height="128" className={clsx(
+      <Image
+        src={feature.icon}
+        width="128"
+        height="128"
+        className={clsx(
           // 'w-32',
-          'rounded-lg p-2 flex justify-center',
+          "flex justify-center rounded-lg p-2"
           // isActive ? 'fill-blue-600' : 'fill-slate-500'
-        )} alt="" />
+        )}
+        alt=""
+      />
       <h3
         className={clsx(
-          'mt-6 text-lg font-medium',
-          isActive ? 'text-blue-600' : 'text-slate-600'
+          "mt-6 text-lg font-medium",
+          isActive ? "text-blue-600" : "text-slate-600"
         )}
       >
         {feature.name}
       </h3>
-      <p className="mt-2 font-display text-xl text-slate-900">
+      <p className="font-display mt-2 text-xl text-slate-900">
         {feature.summary}
       </p>
       <p className="mt-4 text-sm text-slate-600">{feature.description}</p>
     </div>
-  )
+  );
 }
 
 function FeaturesMobile() {
@@ -141,7 +144,7 @@ function FeaturesMobile() {
         </div>
       ))}
     </div>
-  )
+  );
 }
 
 function FeaturesDesktop() {
@@ -167,15 +170,15 @@ function FeaturesDesktop() {
               />
             ))}
           </Tab.List>
-          <Tab.Panels className="relative mt-20 overflow-hidden rounded-4xl bg-slate-200 px-14 py-16 xl:px-16">
+          <Tab.Panels className="rounded-4xl relative mt-20 overflow-hidden bg-slate-200 px-14 py-16 xl:px-16">
             <div className="-mx-5 flex">
               {features.map((feature, featureIndex) => (
                 <Tab.Panel
                   static
                   key={feature.name}
                   className={clsx(
-                    'px-5 transition duration-500 ease-in-out [&:not(:focus-visible)]:focus:outline-none',
-                    featureIndex !== selectedIndex && 'opacity-60'
+                    "px-5 transition duration-500 ease-in-out [&:not(:focus-visible)]:focus:outline-none",
+                    featureIndex !== selectedIndex && "opacity-60"
                   )}
                   style={{ transform: `translateX(-${selectedIndex * 100}%)` }}
                   aria-hidden={featureIndex !== selectedIndex}
@@ -193,12 +196,12 @@ function FeaturesDesktop() {
                 </Tab.Panel>
               ))}
             </div>
-            <div className="pointer-events-none absolute inset-0 rounded-4xl ring-1 ring-inset ring-slate-900/10" />
+            <div className="rounded-4xl pointer-events-none absolute inset-0 ring-1 ring-inset ring-slate-900/10" />
           </Tab.Panels>
         </>
       )}
     </Tab.Group>
-  )
+  );
 }
 
 export function TechStack() {
@@ -214,13 +217,13 @@ export function TechStack() {
             Open Source DevOps stack
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Věřím v Open Source technologie, prakticky všichni je denně využíváme
-            a jsou naší budoucností.
+            Věřím v Open Source technologie, prakticky všichni je denně
+            využíváme a jsou naší budoucností.
           </p>
         </div>
         <FeaturesMobile />
         <FeaturesDesktop />
       </Container>
     </section>
-  )
+  );
 }

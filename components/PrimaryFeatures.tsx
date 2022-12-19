@@ -1,27 +1,31 @@
-import Image from 'next/image'
-import clsx from 'clsx'
+import Image from "next/image";
+import clsx from "clsx";
 
-import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-features.jpg'
+import { Container } from "@/components/Container";
+import backgroundImage from "@/images/background-features.jpg";
 
 const steps = [
   {
-    name: 'Analýza současného stavu',
-    description: 'Zjistíme kde jsou slabá místa vaší infrastruktury nebo aplikace, a nebo obojího.',
+    name: "Analýza současného stavu",
+    description:
+      "Zjistíme kde jsou slabá místa vaší infrastruktury nebo aplikace, a nebo obojího.",
   },
   {
-    name: 'Návrh řešení',
-    description: 'Navrhnu, jak tato slabá místa odstranit, na co si dát pozor a naplánujeme případné další kroky. ',
+    name: "Návrh řešení",
+    description:
+      "Navrhnu, jak tato slabá místa odstranit, na co si dát pozor a naplánujeme případné další kroky. ",
   },
   {
-    name: 'Implementace',
-    description: 'Přesunu vaši aplikaci do Kubernetes, ať na vašem vlastním hardware nebo v public cloudu. Celá infrastruktura bude jasně deklarovaná jako kód pomocí Terraformu.',
+    name: "Implementace",
+    description:
+      "Přesunu vaši aplikaci do Kubernetes, ať na vašem vlastním hardware nebo v public cloudu. Celá infrastruktura bude jasně deklarovaná jako kód pomocí Terraformu.",
   },
   {
-    name: 'Proškolení vašeho týmu',
-    description: 'Naučím váš tým používat moderní technologie, tak abyste mohli rozvíjet vaší aplikaci a byznys a technologie byly nástrojem k rozvoji, ne břemenem, které s sebou táhnete.',
+    name: "Proškolení vašeho týmu",
+    description:
+      "Naučím váš tým používat moderní technologie, tak abyste mohli rozvíjet vaší aplikaci a byznys a technologie byly nástrojem k rozvoji, ne břemenem, které s sebou táhnete.",
   },
-]
+];
 
 export function PrimaryFeatures() {
   return (
@@ -48,11 +52,23 @@ export function PrimaryFeatures() {
           </p>
         </div>
         <nav aria-label="Progress">
-          <ol role="list" className="overflow-hidden pt-2 mt-20 max-w-3xl mx-auto">
+          <ol
+            role="list"
+            className="mx-auto mt-20 max-w-3xl overflow-hidden pt-2"
+          >
             {steps.map((step, stepIdx) => (
-              <li key={step.name} className={clsx(stepIdx !== steps.length - 1 ? 'pb-10' : '', 'relative')}>
+              <li
+                key={step.name}
+                className={clsx(
+                  stepIdx !== steps.length - 1 ? "pb-10" : "",
+                  "relative"
+                )}
+              >
                 {stepIdx !== steps.length - 1 ? (
-                  <div className="absolute top-4 left-6 -ml-px mt-0.5 h-full w-0.5 bg-white" aria-hidden="true" />
+                  <div
+                    className="absolute top-4 left-6 -ml-px mt-0.5 h-full w-0.5 bg-white"
+                    aria-hidden="true"
+                  />
                 ) : null}
                 <div className="group relative flex items-start">
                   <span className="flex h-9 items-center" aria-hidden="true">
@@ -61,8 +77,12 @@ export function PrimaryFeatures() {
                     </span>
                   </span>
                   <span className="ml-4 flex min-w-0 flex-col">
-                    <span className="text-2xl text-white font-normal">{step.name}</span>
-                    <span className="text-lg text-blue-200">{step.description}</span>
+                    <span className="text-2xl font-normal text-white">
+                      {step.name}
+                    </span>
+                    <span className="text-lg text-blue-200">
+                      {step.description}
+                    </span>
                   </span>
                 </div>
               </li>
@@ -71,5 +91,5 @@ export function PrimaryFeatures() {
         </nav>
       </Container>
     </section>
-  )
+  );
 }
