@@ -4,9 +4,9 @@ import { ReactNode } from "react";
 
 const baseStyles = {
   solid:
-    "group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2",
+    "group inline-flex items-center justify-center rounded-full font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2",
   outline:
-    "group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none",
+    "group inline-flex ring-1 items-center justify-center rounded-full focus:outline-none",
 };
 
 const variantStyles = {
@@ -27,9 +27,15 @@ const variantStyles = {
   },
 };
 
+const sizeStyles = {
+  default: "px-4 py-2 text-sm",
+  large: "px-8 py-4 text-base",
+};
+
 type Props = {
   variant?: "solid" | "outline";
   color?: "slate" | "white" | "blue";
+  size?: "default" | "large";
   className?: string;
   href?: string;
   children?: ReactNode;
@@ -38,6 +44,7 @@ type Props = {
 export function Button({
   variant = "solid",
   color = "slate",
+  size = "default",
   className,
   href,
   children,
@@ -45,6 +52,7 @@ export function Button({
   className = clsx(
     baseStyles[variant],
     variantStyles[variant][color],
+    sizeStyles[size],
     className
   );
 
