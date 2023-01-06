@@ -21,7 +21,9 @@ const TrainingDetail = ({
       className={clsx(
         className,
         "rounded-3xl py-8 px-6 shadow sm:px-8",
-        training.featured ? "bg-blue-600 py-8" : ""
+        training.featured ? "bg-blue-600 py-8" : "",
+        training.featured ? "hover:bg-blue-700" : "md:ring-1 md:hover:ring-slate-700 md:ring-transparent",
+        "transition ease-in-out duration-300 md:hover:-translate-y-1 md:hover:scale-110 "
       )}
       {...props}
     >
