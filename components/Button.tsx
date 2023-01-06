@@ -27,6 +27,8 @@ const variantStyles = {
   },
 };
 
+const transitionStyle = "transition duration-150 ease-in-out";
+
 const sizeStyles = {
   default: "px-4 py-2 text-sm",
   large: "px-8 py-4 text-base",
@@ -53,6 +55,7 @@ export function Button({
     baseStyles[variant],
     variantStyles[variant][color],
     sizeStyles[size],
+    transitionStyle,
     className
   );
 
