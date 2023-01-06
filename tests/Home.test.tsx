@@ -8,7 +8,7 @@ test("home", () => {
   expect(
     main.getByRole("heading", {
       level: 1,
-      name: /DevOps jednoduše pro všechny./i,
+      name: /Jsem Vojtěch Mareš a pomohu Vám s Vaší IT infrastrukturou./i,
     })
   ).toBeDefined();
 
