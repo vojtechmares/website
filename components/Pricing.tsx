@@ -43,7 +43,9 @@ function Plan({
     <section
       className={clsx(
         "flex flex-col rounded-3xl px-6 sm:px-8",
-        featured ? "order-first bg-blue-600 py-8 lg:order-none" : "lg:py-8"
+        featured ? "order-first bg-blue-600 py-8 lg:order-none" : "lg:py-8",
+        featured ? "hover:bg-blue-700" : "md:ring-1 md:hover:ring-slate-700 md:ring-transparent",
+        "transition ease-in-out duration-300 md:hover:-translate-y-1 md:hover:scale-110"
       )}
     >
       <h3 className="font-display mt-5 text-4xl text-white">{name}</h3>
