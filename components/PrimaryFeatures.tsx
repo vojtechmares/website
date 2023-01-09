@@ -32,16 +32,16 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for running your books"
-      className="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32"
+      className="relative overflow-hidden bg-gradient-to-br to-cyan-600 via-blue-600 from-blue-600 pt-20 pb-28 sm:py-32" // bg-blue-600
     >
-      <Image
+      {/* <Image
         className="absolute top-1/2 left-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
         src={backgroundImage}
         alt=""
         width={1920}
         height={1400}
         loading="eager"
-      />
+      /> */}
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
