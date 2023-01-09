@@ -1,9 +1,27 @@
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 
 import avatarVojtechMares from "@/images/avatars/vojtech-mares.png";
+import logoGLAMI from "@/images/logos/glami.svg";
+import logoDigitoo from "@/images/logos/digitoo.svg";
+
+type Company = {
+  name: string;
+  logo: StaticImageData;
+}
+
+type CompanyList = Company[][]; // rows, three items per row
+
+const companies: CompanyList = [
+  [
+    { name: 'GLAMI', logo: logoGLAMI },
+    { name: 'Digitoo', logo: logoDigitoo },
+  ],
+  // [], // columns for mobile view - 3 items per row
+];
+
 
 export function Hero() {
   return (
@@ -42,46 +60,39 @@ export function Hero() {
                 Napište mi email
               </Button>
             </div>
+            <div className="mt-10 "> {/* mt-36 lg:mt-44 */}
+              <p className="font-display text-lg tracking-tight text-slate-900">
+                Moji spokojení klienti, přidejte se k nim i Vy.
+              </p>
+              <ul
+                role="list"
+                className="mt-4 flex items-center justify-center gap-x-8 sm:justify-start sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0"
+              >
+                {companies.map((group, groupIndex) => (
+                  <li key={groupIndex}>
+                    <ul
+                      role="list"
+                      className="flex flex-col items-center justify-center gap-y-8 sm:justify-start sm:flex-row sm:gap-x-12 sm:gap-y-0"
+                    >
+                      {group.map((company) => (
+                        <li key={company.name} className="flex">
+                          <Image
+                            className="h-16 object-scale-down"
+                            src={company.logo}
+                            alt={company.name}
+                            width={128}
+                            height={64}
+                          />
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
           <Image className="pt-10 md:pt-0" width={400} height={800} src={avatarVojtechMares} alt="Vojtěch Mareš" />
         </div>
-      </Container>
-      <Container>
-        {/* <div className="mt-36 lg:mt-44">
-          <p className="font-display text-base text-slate-900">
-            Trusted by these six companies so far
-          </p>
-          <ul
-            role="list"
-            className="mt-8 flex items-center justify-center gap-x-8 sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0"
-          >
-            {[
-              [
-                { name: 'Transistor', logo: logoTransistor },
-                { name: 'Tuple', logo: logoTuple },
-                { name: 'StaticKit', logo: logoStaticKit },
-              ],
-              [
-                { name: 'Mirage', logo: logoMirage },
-                { name: 'Laravel', logo: logoLaravel },
-                { name: 'Statamic', logo: logoStatamic },
-              ],
-            ].map((group, groupIndex) => (
-              <li key={groupIndex}>
-                <ul
-                  role="list"
-                  className="flex flex-col items-center gap-y-8 sm:flex-row sm:gap-x-12 sm:gap-y-0"
-                >
-                  {group.map((company) => (
-                    <li key={company.name} className="flex">
-                      <Image src={company.logo} alt={company.name} unoptimized />
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ))}
-          </ul>
-        </div> */}
       </Container>
     </>
   );
