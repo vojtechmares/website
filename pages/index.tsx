@@ -29,7 +29,7 @@ export default function Home() {
         <TechStack />
         <CallToAction />
         <Environment />
-        {/* <Testimonials /> */}
+        <Testimonials />
         <Pricing />
         {/* <Faqs /> */}
       </main>
