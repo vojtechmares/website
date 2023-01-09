@@ -43,8 +43,8 @@ function Plan({
     <section
       className={clsx(
         "flex flex-col rounded-3xl px-6 sm:px-8",
-        featured ? "order-first bg-blue-600 py-8 lg:order-none" : "lg:py-8",
-        featured ? "hover:bg-blue-700" : "md:ring-1 md:hover:ring-slate-700 md:ring-transparent",
+        featured ? "order-first bg-amber-500 py-8 lg:order-none" : "lg:py-8",
+        featured ? "hover:bg-amber-600" : "md:ring-1 md:hover:ring-slate-700 md:ring-transparent",
         "transition ease-in-out duration-300 md:hover:-translate-y-1 md:hover:scale-110"
       )}
     >
@@ -78,13 +78,13 @@ export function Pricing() {
     <section
       id="pricing"
       aria-label="Pricing"
-      className="bg-slate-900 py-20 sm:py-32"
+      className="bg-black py-20 sm:py-32"
     >
       <Container>
         <div className="md:text-center">
           <h3 className="font-display text-xl tracking-tight text-white sm:text-4xl">
             <span className="relative whitespace-nowrap">
-              <SwirlyDoodle className="absolute top-1/2 left-0 h-[1em] w-full fill-blue-400" />
+              <SwirlyDoodle className="absolute top-1/2 left-0 h-[1em] w-full fill-amber-400" />
               <span className="relative">Co pro Vás,</span>
             </span>{" "}
             můžu udělat.

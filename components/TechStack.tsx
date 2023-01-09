@@ -102,19 +102,19 @@ function Feature({ feature, isActive, className, ...props }: FeatureProps) {
         className={clsx(
           // 'w-32',
           "flex justify-center rounded-lg p-2"
-          // isActive ? 'fill-blue-600' : 'fill-slate-500'
+          // isActive ? 'fill-amber-500' : 'fill-slate-500'
         )}
         alt=""
       />
       <h3
         className={clsx(
           "mt-6 text-lg font-medium",
-          isActive ? "text-blue-600" : "text-slate-600"
+          isActive ? "text-amber-500" : "text-slate-600"
         )}
       >
         {feature.name}
       </h3>
-      <p className="font-display mt-2 text-xl text-slate-900">
+      <p className="font-display mt-2 text-xl text-black">
         {feature.summary}
       </p>
       <p className="mt-4 text-sm text-slate-600">{feature.description}</p>
@@ -213,7 +213,7 @@ export function TechStack() {
     >
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
-          <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="font-display text-3xl tracking-tight text-black sm:text-4xl">
             Open Source DevOps stack
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">

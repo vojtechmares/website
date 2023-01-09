@@ -8,7 +8,7 @@ export function CallToAction() {
   return (
     <section
       id="get-started-today"
-      className="relative overflow-hidden bg-blue-600 py-32" // bg-gradient-to-br to-cyan-600 via-blue-600 from-blue-600
+      className="relative overflow-hidden bg-amber-500 py-32" // bg-gradient-to-br to-cyan-600 via-amber-500 from-amber-500
     >
       {/* <Image
         className="absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"

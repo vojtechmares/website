@@ -17,7 +17,7 @@ export const Training = ({ training }: Props) => {
   return (
     <>
       <div className="pb-14 sm:pb-20 lg:pb-32">
-        <div className="bg-slate-900 pt-16 pb-16">
+        <div className="bg-black pt-16 pb-16">
           <Container className="flex justify-around">
             <Image
               src={training.logo}
@@ -41,7 +41,7 @@ export const Training = ({ training }: Props) => {
             </div>
             <div className="mt-8 md:col-span-2 md:mt-0">
               {training.days === 2 ? (
-                <div className=" mb-8 rounded-lg bg-blue-50 p-4 shadow">
+                <div className=" mb-8 rounded-lg bg-amber-50 p-4 shadow">
                   <div className="flex">
                     <div className="flex-shrink-0">
                       {/* <ExclamationTriangleIcon className="h-5 w-5 text-yellow-400" aria-hidden="true" /> */}
@@ -49,7 +49,7 @@ export const Training = ({ training }: Props) => {
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
                         fill="currentColor"
-                        className="h-5 w-5 text-blue-400"
+                        className="h-5 w-5 text-amber-400"
                       >
                         <path
                           fill-rule="evenodd"
@@ -59,9 +59,9 @@ export const Training = ({ training }: Props) => {
                       </svg>
                     </div>
                     <div className="ml-3">
-                      <p className="text-blue-700">
+                      <p className="text-amber-600">
                         Toto školení je{" "}
-                        <span className="font-medium text-blue-700">
+                        <span className="font-medium text-amber-600">
                           dvoudenní.
                         </span>
                       </p>
@@ -73,7 +73,7 @@ export const Training = ({ training }: Props) => {
               )}
               <div className="mt-8 overflow-hidden rounded-lg bg-slate-50 shadow md:mt-0">
                 <div className="px-4 py-5 sm:px-6">
-                  <h3 className="text-lg font-medium leading-6 text-slate-900">
+                  <h3 className="text-lg font-medium leading-6 text-black">
                     Cena za školení
                   </h3>
                 </div>
