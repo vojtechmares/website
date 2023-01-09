@@ -88,8 +88,7 @@ export function Pricing() {
             můžu udělat.
           </h3>
           <p className="mt-4 text-lg text-slate-400">
-            It doesn’t matter what size your company is, we will find a way to
-            help you.
+            Nezáleží na velikosti Vaší firmy, ať jste startup, nebo korporát, dokážu pomoci každému.
           </p>
         </div>
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
