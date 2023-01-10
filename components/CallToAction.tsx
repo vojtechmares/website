@@ -5,14 +5,14 @@ export function CallToAction() {
   return (
     <section
       id="get-started-today"
-      className="relative overflow-hidden bg-blue-600 py-32"
+      className="relative overflow-hidden bg-amber-500 py-32"
     >
       <Container className="relative">
         <div className="mx-auto max-w-xl text-center">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             Posuňte svoji aplikaci už dnes
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-white">
+          <p className="mt-4 text-lg tracking-tight text-slate-100">
             Je na čase pozvednout vaši infrastrukturu na dnešní standardy. Vaše
             infrastruktura by měla nabídnout Vaši aplikaci světu, ne ji držet
             zpátky.
