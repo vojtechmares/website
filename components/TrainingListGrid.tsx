@@ -21,8 +21,8 @@ const TrainingDetail = ({
       className={clsx(
         className,
         "rounded-3xl py-8 px-6 shadow sm:px-8",
-        training.featured ? "bg-blue-600 py-8" : "",
-        training.featured ? "hover:bg-blue-700" : "md:ring-1 md:hover:ring-slate-700 md:ring-transparent",
+        training.featured ? "bg-amber-500 py-8" : "",
+        training.featured ? "hover:bg-amber-600" : "md:ring-1 md:hover:ring-slate-700 md:ring-transparent",
         "transition ease-in-out duration-300 md:hover:-translate-y-1 md:hover:scale-110 "
       )}
       {...props}
@@ -54,10 +54,7 @@ const TrainingDetail = ({
         </p>
       </div>
       <p
-        className={clsx(
-          "text-md mt-4",
-          training.featured ? "text-white" : "text-slate-200"
-        )}
+        className="text-md mt-4 text-slate-100"
       >
         {training.description.split(" ").splice(0, 40).join(" ") + "..."}
       </p>
@@ -117,7 +114,7 @@ export const TrainingListGrid = ({ trainingList }: TrainingListProps) => {
       <section
         id="training-list"
         aria-label="Seznam školení"
-        className="bg-slate-900 pt-16 pb-14 sm:pb-20 sm:pt-24 lg:pb-32"
+        className="bg-black pt-16 pb-14 sm:pb-20 sm:pt-24 lg:pb-32"
       >
         <Container>
           <div className="mx-auto max-w-2xl md:text-center">

@@ -30,14 +30,14 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for running your books"
-      className="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32"
+      className="relative overflow-hidden bg-gradient-to-br to-amber-600 via-amber-500 from-amber-500 pt-20 pb-28 sm:py-32"
     >
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
             Z nuly do cloudu.
           </h2>
-          <p className="mt-6 text-lg tracking-tight text-blue-100">
+          <p className="mt-6 text-lg tracking-tight text-slate-100">
             Vše co budete potřebovat, od začátku až do cíle.
           </p>
         </div>
@@ -62,15 +62,15 @@ export function PrimaryFeatures() {
                 ) : null}
                 <div className="group relative flex items-start">
                   <span className="flex h-9 items-center" aria-hidden="true">
-                    <span className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border-2 border-blue-600 bg-white">
-                      <span className="h-3 w-3 rounded-full bg-blue-600" />
+                    <span className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border-2 border-amber-500 bg-white">
+                      <span className="h-3 w-3 rounded-full bg-amber-500" />
                     </span>
                   </span>
                   <span className="ml-4 flex min-w-0 flex-col">
                     <span className="text-2xl font-normal text-white">
                       {step.name}
                     </span>
-                    <span className="text-lg text-blue-200">
+                    <span className="text-lg text-slate-100">
                       {step.description}
                     </span>
                   </span>
