@@ -20,6 +20,7 @@ export function CallToAction() {
           <Button
             href="https://calendly.com/vojtechmares/30min"
             color="white"
+            size="large"
             className="mt-10"
           >
             Domluvme si schůzku
