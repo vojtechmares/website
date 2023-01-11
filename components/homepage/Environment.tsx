@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { Container } from "./Container";
+import { Container } from "@/components/Container";
 
 import logoKubernetes from "@/images/logos/tools/kubernetes.svg";
 import logok3s from "@/images/logos/tools/k3s.svg";

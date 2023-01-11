@@ -1,8 +1,8 @@
 import Image from "next/image";
 
 import TrainingType from "@/types/training";
-import { Container } from "./Container";
-import { Button } from "./Button";
+import { Container } from "@/components/Container";
+import { Button } from "@/components/Button";
 
 type Props = {
   training: TrainingType;
