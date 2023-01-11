@@ -1,13 +1,19 @@
----
-name: Kubernetes
-priceOpen: 11900
-priceCompany: 44000
-logo: /images/logos/kubernetes.png
-description: "Kubernetes jsou dnes nejrozšířenější platformou na hostování Docker kontejnerů a jsou podporovány velkými hráči na trhu (Google, Amazon, Microsoft) skrz Cloud Native Computing Foundation. Kubernetes pro provoz používají všechny velikosti firem, od startupu po korporace."
-days: 2
-featured: true
-weight: 50
----
+import logoKubernetes from "@/images/logos/tools/kubernetes.png";
+import TrainingLayout from "@/components/trainingpage/TrainingLayout";
+
+export const meta = {
+  name: "Kubernetes",
+  price: {
+    open: 11900,
+    company: 44000,
+  },
+  logo: logoKubernetes,
+  description:
+    "Kubernetes jsou dnes nejrozšířenější platformou na hostování Docker kontejnerů a jsou podporovány velkými hráči na trhu (Google, Amazon, Microsoft) skrz Cloud Native Computing Foundation. Kubernetes pro provoz používají všechny velikosti firem, od startupu po korporace.",
+  days: 2,
+  featured: true,
+  weight: 50,
+};
 
 # Popis technologie
 
@@ -40,3 +46,7 @@ Základy práce v terminálu
 Technické požadavky
 Nainstalovaný Kubernetes
 Přístup na internet - ideálně bez korporátní proxy, případně nastavenou proxy v prohlížeči
+
+export default ({ children }) => (
+  <TrainingLayout content={children} meta={meta} />
+);

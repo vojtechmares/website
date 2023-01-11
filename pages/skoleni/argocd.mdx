@@ -1,13 +1,19 @@
----
-name: ArgoCD
-priceOpen: 5900
-priceCompany: 24000
-logo: /images/logos/argo.png
-description: "ArgoCD je GitOps nastroj kterym nasazujeme aplikace do Kubernetes. Pracuje na zaklade deklaraticnich konfiguracnich souboru, ktete si stahuje z Gitu. To znamena, ze vse co commitneme do repozitare, se na nasadi do Kubernetes. O vsech zmenach: co, kdy, kdo udelal budeme mit prehledne zaznami v Gitu."
-days: 1
-new: true
-weight: 49
----
+import TrainingLayout from "@/components/trainingpage/TrainingLayout";
+import logoArgo from "@/images/logos/tools/argo.png";
+
+export const meta = {
+  name: "ArgoCD",
+  price: {
+    open: 5900,
+    company: 24000,
+  },
+  logo: logoArgo,
+  description:
+    "ArgoCD je GitOps nastroj kterym nasazujeme aplikace do Kubernetes. Pracuje na zaklade deklaraticnich konfiguracnich souboru, ktete si stahuje z Gitu. To znamena, ze vse co commitneme do repozitare, se na nasadi do Kubernetes. O vsech zmenach: co, kdy, kdo udelal budeme mit prehledne zaznami v Gitu.",
+  days: 1,
+  featured: true,
+  weight: 49,
+};
 
 # Popis technologie
 
@@ -37,3 +43,7 @@ Zakladni znalost Kubernetes
 Technické požadavky
 Webový prohlížeč
 Přístup na internet
+
+export default ({ children }) => (
+  <TrainingLayout content={children} meta={meta} />
+);

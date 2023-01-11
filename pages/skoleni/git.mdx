@@ -1,12 +1,18 @@
----
-name: Git
-priceOpen: 5900
-priceCompany: 24000
-logo: /images/logos/git.png
-description: "Git je moderní verzovaci nástroj, který se stal de facto standardem mezi vývojáři. Používají jej na denní bázy jednotlivci, startupy i korporace. Git vám nabízí jednoduchou kolaboraci na projektu s více lidmi a práci na více částech současně aniž byste si zasahovali do rozdělaných věcí nebo je jinak narušovali. Spolupráci na vývoji projektu ještě zlepšuje Gitlab, což je kolaborativni platforma na návrh, vývoj a provozování software (více o Gitlabu v samostatném kurzu)."
-days: 1
-weight: 1
----
+import TrainingLayout from "@/components/trainingpage/TrainingLayout";
+import logoGit from "@/images/logos/tools/git.png";
+
+export const meta = {
+  name: "Git",
+  price: {
+    open: 5900,
+    company: 24000,
+  },
+  logo: logoGit,
+  description:
+    "Git je moderní verzovaci nástroj, který se stal de facto standardem mezi vývojáři. Používají jej na denní bázy jednotlivci, startupy i korporace. Git vám nabízí jednoduchou kolaboraci na projektu s více lidmi a práci na více částech současně aniž byste si zasahovali do rozdělaných věcí nebo je jinak narušovali. Spolupráci na vývoji projektu ještě zlepšuje Gitlab, což je kolaborativni platforma na návrh, vývoj a provozování software (více o Gitlabu v samostatném kurzu).",
+  days: 1,
+  weight: 1,
+};
 
 # Co je to Git?
 
@@ -40,3 +46,7 @@ Základní znalost Gitu výhodou
 
 Nainstalovaný Git
 Přístup na internet - ideálně bez korporátní proxy, případně nastavenou proxy v prohlížeči
+
+export default ({ children }) => (
+  <TrainingLayout content={children} meta={meta} />
+);
