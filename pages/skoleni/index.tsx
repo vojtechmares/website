@@ -1,10 +1,10 @@
 import Head from "next/head";
 
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import { getAllTraining } from "@/lib/cms/training";
 import TrainingType from "@/types/training";
-import { TrainingListGrid } from "@/components/TrainingListGrid";
+import { TrainingListGrid } from "@/components/trainingpage/TrainingListGrid";
 
 export const getStaticProps = async () => {
   const allTraining = getAllTraining([

@@ -5,9 +5,9 @@ import ErrorPage from "next/error";
 import TrainingType from "@/types/training";
 import { getAllTraining, getTrainingBySlug } from "@/lib/cms/training";
 import markdownToHTML from "@/lib/markdownToHTML";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { Training } from "@/components/Training";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { Training } from "@/components/trainingpage/Training";
 
 type Props = {
   training: TrainingType;

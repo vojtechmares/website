@@ -1,15 +1,15 @@
 import Head from "next/head";
 
-import { Header } from "@/components/Header";
-import { Hero } from "@/components/Hero";
-import { CallToAction } from "@/components/CallToAction";
-import { Faqs } from "@/components/Faqs";
-import { Footer } from "@/components/Footer";
-import { Pricing } from "@/components/Pricing";
-import { PrimaryFeatures } from "@/components/PrimaryFeatures";
-import { TechStack } from "@/components/TechStack";
-import { Testimonials } from "@/components/Testimonials";
-import { Environment } from "@/components/Environment";
+import { Header } from "@/components/layout/Header";
+import { Hero } from "@/components/homepage/Hero";
+import { CallToAction } from "@/components/homepage/CallToAction";
+import { Faqs } from "@/components/homepage/Faqs";
+import { Footer } from "@/components/layout/Footer";
+import { Pricing } from "@/components/homepage/Pricing";
+import { PrimaryFeatures } from "@/components/homepage/PrimaryFeatures";
+import { TechStack } from "@/components/homepage/TechStack";
+import { Testimonials } from "@/components/homepage/Testimonials";
+import { Environment } from "@/components/homepage/Environment";
 
 export default function Home() {
   return (

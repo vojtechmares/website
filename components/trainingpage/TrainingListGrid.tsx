@@ -2,8 +2,8 @@ import Image from "next/image";
 import clsx from "clsx";
 
 import TrainingType from "@/types/training";
-import { Container } from "./Container";
-import { Button } from "./Button";
+import { Container } from "@/components/Container";
+import { Button } from "@/components/Button";
 
 type TrainingDetailProps = {
   training: TrainingType;
