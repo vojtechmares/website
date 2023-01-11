@@ -15,7 +15,7 @@ export function Header() {
               </span>
               <div className="hidden md:flex md:gap-x-6">
                 <Link
-                  href="/skoleni"
+                  href="/#skoleni"
                   className="inline-block rounded-full py-2 px-4 text-lg font-medium text-slate-700 hover:bg-slate-100 hover:text-black focus-visible:outline-black"
                 >
                   Školení
