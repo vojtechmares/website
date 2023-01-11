@@ -1,17 +1,19 @@
----
-name: Terraform
-priceOpen: 5900
-priceCompany: 24000
-logo: /images/logos/terraform.png
-description: "Terraform je nástroj, který se používá ke správě infrastruktury v cloudu, jak veřejném (AWS, Azure, GCP), tak privátním (OpenStack, VMware vSphere).
+import TrainingLayout from "@/components/trainingpage/TrainingLayout";
+import logoTerraform from "@/images/logos/tools/terraform.png";
 
-Terraform Vám umožní spravovat infrastruktutru jako kód, to znamená verzovanou v Gitu, přidávání resources pomocí merge (pull) requestů a mnoho dalších výhod. Infrastrukturu můžete dále nasadit do testovacího prostředí přesně tak, jako je v produkci bez zbytečného úsilí. O všech komponentách máte přehled a můžete predikovat ceny. Konec klikání infrastruktury, zkuste Terraform.
-
-Terraform umožnuje spravovat více cloudových providerů současne, zároveň umožnuje pracovat s hibridními cloudy (část v privátním cloudu, část ve veřejném)."
-days: 1
-featured: true
-weight: 31
----
+export const meta = {
+  name: "Terraform",
+  price: {
+    open: 5900,
+    company: 24000,
+  },
+  logo: logoTerraform,
+  description:
+    "Terraform je nástroj, který se používá ke správě infrastruktury v cloudu, jak veřejném (AWS, Azure, GCP), tak privátním (OpenStack, VMware vSphere). Terraform Vám umožní spravovat infrastruktutru jako kód, to znamená verzovanou v Gitu, přidávání resources pomocí merge (pull) requestů a mnoho dalších výhod. Infrastrukturu můžete dále nasadit do testovacího prostředí přesně tak, jako je v produkci bez zbytečného úsilí. O všech komponentách máte přehled a můžete predikovat ceny. Konec klikání infrastruktury, zkuste Terraform. Terraform umožnuje spravovat více cloudových providerů současne, zároveň umožnuje pracovat s hibridními cloudy (část v privátním cloudu, část ve veřejném).",
+  days: 1,
+  featured: true,
+  weight: 31,
+};
 
 # Co to je Terraform a k čemu se používá?
 
@@ -51,3 +53,7 @@ Základy práce v terminálu
 Nainstalovaný Terraform
 Přístup na internet (ideálně bez korporatni proxy)
 Vlastní účet v DigitalOceanu výhodou
+
+export default ({ children }) => (
+  <TrainingLayout content={children} meta={meta} />
+);
