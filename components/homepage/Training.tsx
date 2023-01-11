@@ -58,8 +58,8 @@ const TrainingGridDesktop = () => {
     <div className="hidden lg:mt-20 lg:block">
       <div className="grid grid-cols-4 gap-x-8 gap-y-4">
         {trainingList.map((training) => (
-          <div key={training.name}>
-            <Training training={training} className="relative py-4 cursor-pointer rounded-3xl transition ease-in-out duration-300 md:hover:-translate-y-1 md:hover:scale-110 md:ring-1 md:hover:ring-slate-700 md:ring-transparent" />
+          <div key={training.name} className="relative py-4 cursor-pointer rounded-3xl transition ease-in-out duration-300 md:hover:-translate-y-1 md:hover:scale-110 md:ring-1 md:hover:ring-slate-700 md:ring-transparent">
+            <Training training={training} />
           </div>
         ))}
       </div>
