@@ -12,8 +12,8 @@ export function CallToAction() {
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             Posuňte svoji aplikaci už dnes
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-100">
-            Je na čase pozvednout vaši infrastrukturu na dnešní standardy. Vaše
+          <p className="mt-4 text-lg tracking-tight text-white">
+            Je na čase pozvednout Vaši infrastrukturu na dnešní standardy. Vaše
             infrastruktura by měla nabídnout Vaši aplikaci světu, ne ji držet
             zpátky.
           </p>

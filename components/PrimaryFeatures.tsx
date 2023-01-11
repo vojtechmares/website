@@ -6,7 +6,7 @@ const steps = [
   {
     name: "Analýza současného stavu",
     description:
-      "Zjistíme kde jsou slabá místa vaší infrastruktury nebo aplikace, a nebo obojího.",
+      "Zjistíme kde jsou slabá místa Vaší infrastruktury nebo aplikace, a nebo obojího.",
   },
   {
     name: "Návrh řešení",
@@ -16,12 +16,12 @@ const steps = [
   {
     name: "Implementace",
     description:
-      "Přesunu vaši aplikaci do Kubernetes, ať na vašem vlastním hardware nebo v public cloudu. Celá infrastruktura bude jasně deklarovaná jako kód pomocí Terraformu.",
+      "Přesunu Vaši aplikaci do Kubernetes, ať na Vašem vlastním hardware nebo v public cloudu. Celá infrastruktura bude jasně deklarovaná jako kód pomocí Terraformu.",
   },
   {
-    name: "Proškolení vašeho týmu",
+    name: "Proškolení Vašeho týmu",
     description:
-      "Naučím váš tým používat moderní technologie, tak abyste mohli rozvíjet vaší aplikaci a byznys a technologie byly nástrojem k rozvoji, ne břemenem, které s sebou táhnete.",
+      "Naučím váš tým používat moderní technologie, tak abyste mohli rozvíjet Vaší aplikaci a byznys a technologie byly nástrojem k rozvoji, ne břemenem, které s sebou táhnete.",
   },
 ];
 

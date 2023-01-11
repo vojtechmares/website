@@ -111,7 +111,7 @@ export function Pricing() {
           <Plan
             name="Implementace"
             price="Cena dohodou"
-            description="Analyzujeme vaši situaci, projdeme možnosti, vybereme nejlepší řešení a společně jej nasadíme."
+            description="Analyzujeme Vaši situaci, projdeme možnosti, vybereme nejlepší řešení a společně jej nasadíme."
             href="https://calendly.com/vojtechmares/30min"
             buttonText="Domluvme si schůzku"
           />

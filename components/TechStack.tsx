@@ -24,14 +24,14 @@ const features = [
     name: "Verzování",
     summary: "Spravujte svůj kód pomocí verzovacího nástroje Git.",
     description:
-      "Mějte historii změn v aplikaci od začátku až do dnes, můžete se kdykoliv vrátit do bodu v čase. Řešte konflikty včas, předtím než je nasadíte do produkce a umožněte vaším programátorům spolupracovat na jednou, aniž by si překáželi.",
+      "Mějte historii změn v aplikaci od začátku až do dnes, můžete se kdykoliv vrátit do bodu v čase. Řešte konflikty včas, předtím než je nasadíte do produkce a umožněte Vaším programátorům spolupracovat na jednou, aniž by si překáželi.",
     image: screenshotGitLab,
     icon: logoGit,
   },
   {
     name: "Infastruktura jako kód",
     summary:
-      "Mějte vaši infrastrukturu deklarativně definovanou a verzovanou, díky Terraformu.",
+      "Mějte Vaši infrastrukturu deklarativně definovanou a verzovanou, díky Terraformu.",
     description:
       "Vaši infrastrukturu můžete snadno přesunout k jinému poskytovateli, a nebo jen vytvořit nové prostředí pro zákazníka, aby si váš produkt vyzkoušel a to během minut.",
     image: screenshotTerraform,
@@ -40,9 +40,9 @@ const features = [
   {
     name: "Orchestrace",
     summary:
-      "Nechte vaši aplikaci běžet napříč mnoha servery a škálovat dle potřeb.",
+      "Nechte Vaši aplikaci běžet napříč mnoha servery a škálovat dle potřeb.",
     description:
-      "Kubernetes se stalo nejen standardem, ale i hlavní platformou pro vývoj aplikací ať SaaS nebo dodávaných třetím stranám. Jde o skvělou platformu pro provoz vaší aplikace ať ve veřejném cloudu nebo na vlastním hardwaru popř. on edge blízko koncových uživatelů.",
+      "Kubernetes se stalo nejen standardem, ale i hlavní platformou pro vývoj aplikací ať SaaS nebo dodávaných třetím stranám. Jde o skvělou platformu pro provoz Vaší aplikace ať ve veřejném cloudu nebo na vlastním hardwaru popř. on edge blízko koncových uživatelů.",
     image: screenshotKubernetes,
     icon: logoKubernetes,
   },
@@ -50,7 +50,7 @@ const features = [
     name: "Monitoring",
     summary: "Sledujte Vaši aplikaci, jak se chová v čase.",
     description:
-      "Prometheus je standard pro monitoring aplikací, ať v Kubernetes ale i mimo. Sbírejte telemetrická data v čase o vaši aplikaci. Vyhodnoťte, kde má vaše aplikace slabá místa. Zároveň můžete tvořit pravidla, dle kterých vás AlertManager upozorní, když se něco pokazí.",
+      "Prometheus je standard pro monitoring aplikací, ať v Kubernetes ale i mimo. Sbírejte telemetrická data v čase o Vaši aplikaci. Vyhodnoťte, kde má Vaše aplikace slabá místa. Zároveň můžete tvořit pravidla, dle kterých vás AlertManager upozorní, když se něco pokazí.",
     image: screenshotPrometheus,
     icon: logoPrometheus,
   },
@@ -59,7 +59,7 @@ const features = [
     summary:
       "Od grafů zatížení procesoru po počet otevřených TCP spojení, vše jasně a přehledně.",
     description:
-      "Grafana je skvělý nástroj pro vizualizaci dat z monitoringu, vytvořte si dashboardy pro jednotlivé části vaší aplikace, mějte pohromadě infrastrukturu, provoz na síti, dostupnost a třeba počet neúspěšných pokusů o přihlášení, zda vůči vaší aplikaci neprobíhá hackerský útok.",
+      "Grafana je skvělý nástroj pro vizualizaci dat z monitoringu, vytvořte si dashboardy pro jednotlivé části Vaší aplikace, mějte pohromadě infrastrukturu, provoz na síti, dostupnost a třeba počet neúspěšných pokusů o přihlášení, zda vůči Vaší aplikaci neprobíhá hackerský útok.",
     image: screenshotGrafana,
     icon: logoGrafana,
   },

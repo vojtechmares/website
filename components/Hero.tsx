@@ -45,8 +45,8 @@ export function Hero() {
               a pomohu Vám s Vaší IT infrastrukturou.
             </h1>
             <p className="mt-6 max-w-xl text-lg tracking-tight text-slate-700">
-              Společně snížíme vaše náklady na infrasturkuturu, zbavíme se technického
-              dluhu a připravíme vaší IT infrastrukturu na rapidní škálování.
+              Společně snížíme Vaše náklady na infrasturkuturu, zbavíme se technického
+              dluhu a připravíme Vaší IT infrastrukturu na rapidní škálování.
             </p>
             <div className="mt-10 flex flex-col gap-y-6 md:gap-y-0 md:flex-row md:justify-left md:gap-x-6">
               <Button href="https://calendly.com/vojtechmares/30min" size="large">
