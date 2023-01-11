@@ -105,7 +105,7 @@ export function Pricing() {
             name="Firemní školení"
             price="24 000 CZK za jednodenní školení"
             description="Jednoduše, s názornými příklady, které si každý vyzkouší. Naučím váš tým nové technologii nebo prohloubíme stávající znalosti."
-            href="/skoleni"
+            href="/#skoleni"
             buttonText="Seznam školení"
           />
           <Plan

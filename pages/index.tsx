@@ -10,6 +10,7 @@ import { PrimaryFeatures } from "@/components/homepage/PrimaryFeatures";
 import { TechStack } from "@/components/homepage/TechStack";
 import { Testimonials } from "@/components/homepage/Testimonials";
 import { Environment } from "@/components/homepage/Environment";
+import { TrainingList } from "@/components/homepage/Training";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <Header />
         <Hero />
         <PrimaryFeatures />
+        <TrainingList />
         <TechStack />
         <CallToAction />
         <Environment />
