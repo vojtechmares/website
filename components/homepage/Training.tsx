@@ -43,10 +43,10 @@ const Training = ({ training, className }: TrainingProps) => {
 
 const TrainingGridMobile = () => {
   return (
-    <div className="-mx-4 mt-20 flex flex-col gap-y-10 overflow-hidden px-4 sm:-mx-6 sm:px-6 lg:hidden">
+    <div className="-mx-4 mt-20 grid grid-cols-2 gap-x-8 gap-y-4 overflow-hidden px-4 sm:-mx-6 sm:px-6 lg:hidden">
       {trainingList.map((training) => (
-        <div key={training.name}>
-          <Training training={training} className="mx-auto max-w-2xl" />
+        <div key={training.name} >
+          <Training training={training} />
         </div>
       ))}
     </div>
