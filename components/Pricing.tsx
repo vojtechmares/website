@@ -87,7 +87,7 @@ export function Pricing() {
               <SwirlyDoodle className="absolute top-1/2 left-0 h-[1em] w-full fill-amber-400" />
               <span className="relative">Co pro Vás,</span>
             </span>{" "}
-            můžu udělat.
+            můžu udělat
           </h3>
           <p className="mt-4 text-lg text-slate-400">
             Nezáleží na velikosti Vaší firmy, ať jste startup, nebo korporát, dokážu pomoci každému.
