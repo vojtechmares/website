@@ -82,13 +82,13 @@ export function Pricing() {
     >
       <Container>
         <div className="md:text-center">
-          <h3 className="font-display text-xl tracking-tight text-white sm:text-4xl">
+          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             <span className="relative whitespace-nowrap">
               <SwirlyDoodle className="absolute top-1/2 left-0 h-[1em] w-full fill-amber-400" />
               <span className="relative">Co pro Vás,</span>
             </span>{" "}
             můžu udělat
-          </h3>
+          </h2>
           <p className="mt-4 text-lg text-slate-400">
             Nezáleží na velikosti Vaší firmy, ať jste startup, nebo korporát, dokážu pomoci každému.
           </p>
