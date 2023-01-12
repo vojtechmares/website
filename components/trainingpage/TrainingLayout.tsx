@@ -89,12 +89,12 @@ export default function TrainingLayout({ content, meta }: Props) {
                   <></>
                 )}
                 <div className="mt-8 overflow-hidden rounded-lg bg-slate-50 shadow md:mt-0">
-                  <div className="px-4 py-5 sm:px-6">
+                  <div className="px-4 pt-5 sm:px-6">
                     <h3 className="text-lg font-medium leading-6 text-black">
                       Cena za školení
                     </h3>
                   </div>
-                  <div className="border-t border-slate-100 px-4 py-5">
+                  <div className=" px-4 pb-5 pt-2">
                     <dl className="sm:divide-y sm:divide-slate-400">
                       <div className="py-4 sm:grid sm:grid-cols-2 sm:gap-4 sm:py-5 sm:px-6">
                         <dt className="font-medium text-slate-700">
