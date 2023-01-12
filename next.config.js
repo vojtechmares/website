@@ -20,6 +20,9 @@ const nextConfig = {
     scrollRestoration: true,
   },
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
 };
 
 module.exports = withMDX(nextConfig);
