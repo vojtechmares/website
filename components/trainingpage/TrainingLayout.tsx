@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import clsx from "clsx";
 
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -38,11 +39,14 @@ export default function TrainingLayout({ content, meta }: Props) {
             <Container className="flex justify-around">
               <Image
                 src={meta.logo}
-                className="h-32 w-32 rounded-full"
                 width="1500"
                 height="1500"
                 alt=""
                 priority
+                className={clsx(
+                  "h-32 w-32 rounded-full",
+                  meta.logo.src.endsWith(".svg") ? "invert" : ""
+                )}
               />
               <h2 className="ml-4 text-center font-display self-center text-4xl tracking-tight text-white sm:text-6xl">
                 Školení {meta.name}
