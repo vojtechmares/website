@@ -38,7 +38,6 @@ export default function TrainingLayout({ content, meta }: Props) {
             <Container className="flex justify-around">
               <Image
                 src={meta.logo}
-                placeholder="blur"
                 className="h-32 w-32 rounded-full"
                 width="1500"
                 height="1500"
