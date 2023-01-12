@@ -12,16 +12,10 @@ type Company = {
   logo: StaticImageData;
 }
 
-type CompanyList = Company[][]; // rows, three items per row
-
-const companies: CompanyList = [
-  [
-    { name: 'GLAMI', logo: logoGLAMI },
-    { name: 'Digitoo', logo: logoDigitoo },
-  ],
-  // [], // columns for mobile view - 3 items per row
+const companies: Company[] = [
+  { name: 'GLAMI', logo: logoGLAMI },
+  { name: 'Digitoo', logo: logoDigitoo },
 ];
-
 
 export function Hero() {
   return (
@@ -66,27 +60,18 @@ export function Hero() {
               </p>
               <ul
                 role="list"
-                className="mt-4 flex items-center justify-center gap-x-8 sm:justify-start sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0"
+                className="mt-4 flex flex-wrap items-center justify-center gap-x-6 sm:justify-start"
               >
-                {companies.map((group, groupIndex) => (
-                  <li key={groupIndex}>
-                    <ul
-                      role="list"
-                      className="flex flex-col items-center justify-center gap-y-8 sm:justify-start sm:flex-row sm:gap-x-12 sm:gap-y-0"
-                    >
-                      {group.map((company) => (
-                        <li key={company.name} className="flex">
-                          <Image
-                            className="h-16 object-scale-down"
-                            src={company.logo}
-                            alt={company.name}
-                            width={128}
-                            height={64}
-                            priority
-                          />
-                        </li>
-                      ))}
-                    </ul>
+                {companies.map((company) => (
+                  <li key={company.name} className="flex">
+                    <Image
+                      className="h-16 object-scale-down"
+                      src={company.logo}
+                      alt={company.name}
+                      width={128}
+                      height={64}
+                      priority
+                    />
                   </li>
                 ))}
               </ul>
