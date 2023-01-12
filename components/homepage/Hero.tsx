@@ -27,7 +27,7 @@ export function Hero() {
   return (
     <>
       <Container className="pt-5 lg:pt-8">
-        <div className="md:flex md:justify-between md:items-center">
+        <div className="flex flex-col justify-center md:flex-row md:justify-between md:items-end">
           <div>
             <h1 className="font-display text-5xl font-medium tracking-tight text-black sm:text-7xl leading-10">
               Jsem{" "}
@@ -48,7 +48,7 @@ export function Hero() {
               Společně snížíme Vaše náklady na infrasturkuturu, zbavíme se technického
               dluhu a připravíme Vaší IT infrastrukturu na rapidní škálování.
             </p>
-            <div className="mt-10 flex flex-col gap-y-6 md:gap-y-0 md:flex-row md:justify-left md:gap-x-6">
+            <div className="mt-10 flex flex-col gap-y-6 md:gap-y-0 sm:flex-row sm:justify-center md:justify-left sm:gap-x-6">
               <Button href="https://calendly.com/vojtechmares/30min" size="large">
                 Domluvme si schůzku
               </Button>
@@ -92,7 +92,7 @@ export function Hero() {
               </ul>
             </div>
           </div>
-          <Image className="pt-10 md:pt-0" priority width={400} height={800} src={avatarVojtechMares} alt="Vojtěch Mareš" />
+          <Image className="pt-10 md:pt-0 mx-auto md:mx-0" priority width={400} height={800} src={avatarVojtechMares} alt="Vojtěch Mareš" />
         </div>
       </Container>
     </>
