@@ -42,7 +42,7 @@ export function Hero() {
               Společně snížíme Vaše náklady na infrasturkuturu, zbavíme se technického
               dluhu a připravíme Vaší IT infrastrukturu na rapidní škálování.
             </p>
-            <div className="mt-10 flex flex-col gap-y-6 md:gap-y-0 sm:flex-row sm:justify-center md:justify-left sm:gap-x-6">
+            <div className="mt-10 flex flex-col gap-y-6 md:gap-y-0 sm:flex-row sm:justify-start sm:gap-x-6">
               <Button href="https://calendly.com/vojtechmares/30min" size="large">
                 Domluvme si schůzku
               </Button>
