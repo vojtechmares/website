@@ -7,9 +7,7 @@ import { Faqs } from "@/components/homepage/Faqs";
 import { Footer } from "@/components/layout/Footer";
 import { Pricing } from "@/components/homepage/Pricing";
 import { PrimaryFeatures } from "@/components/homepage/PrimaryFeatures";
-import { TechStack } from "@/components/homepage/TechStack";
 import { Testimonials } from "@/components/homepage/Testimonials";
-import { Environment } from "@/components/homepage/Environment";
 import { KubernetesEverywhere } from "@/components/homepage/KubernetesEverywhere";
 import { TrainingList } from "@/components/homepage/Training";
 
@@ -29,10 +27,8 @@ export default function Home() {
         <Hero />
         <PrimaryFeatures />
         <TrainingList />
-        <TechStack />
         <KubernetesEverywhere />
         <CallToAction />
-        <Environment />
         <Testimonials />
         <Pricing />
         {/* <Faqs /> */}
