@@ -52,7 +52,7 @@ export default function TrainingLayout({ content, meta }: Props) {
           <Container>
             <div className="mt-12 md:grid md:grid-cols-5 md:gap-x-4 md:gap-y-4">
               <div className="md:col-span-3">
-                <div className="prose prose-slate prose-h1:text-2xl prose-h1:font-medium prose-h2:text-xl prose-h2:font-medium prose-h3:text-lg prose-h3:font-medium prose-li:my-0">
+                <div className="prose prose:text-black prose-p:text-slate-700 prose-h1:text-2xl prose-h1:font-medium prose-h2:text-xl prose-h2:font-medium prose-h3:text-lg prose-h3:font-medium prose-li:my-0">
                   {content}
                 </div>
               </div>
