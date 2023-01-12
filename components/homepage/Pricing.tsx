@@ -42,13 +42,13 @@ function Plan({
   return (
     <section
       className={clsx(
-        "flex flex-col rounded-3xl px-6 sm:px-8",
-        featured ? "order-first bg-amber-500 py-8 lg:order-none" : "lg:py-8",
+        "flex flex-col rounded-3xl px-6 sm:px-8 py-8",
+        featured ? "order-first bg-amber-500 lg:order-none" : "",
         featured ? "hover:bg-amber-600" : "md:ring-1 md:hover:ring-slate-700 md:ring-transparent",
         "transition ease-in-out duration-300 md:hover:-translate-y-1 md:hover:scale-110"
       )}
     >
-      <h3 className="font-display mt-5 text-4xl text-white">{name}</h3>
+      <h3 className="font-display text-4xl text-white">{name}</h3>
       <p className="font-display mt-4 text-lg font-light tracking-tight text-white">
         {price}
       </p>
