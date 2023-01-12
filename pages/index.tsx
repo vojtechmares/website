@@ -10,6 +10,7 @@ import { PrimaryFeatures } from "@/components/homepage/PrimaryFeatures";
 import { TechStack } from "@/components/homepage/TechStack";
 import { Testimonials } from "@/components/homepage/Testimonials";
 import { Environment } from "@/components/homepage/Environment";
+import { KubernetesEverywhere } from "@/components/homepage/KubernetesEverywhere";
 import { TrainingList } from "@/components/homepage/Training";
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
         <PrimaryFeatures />
         <TrainingList />
         <TechStack />
+        <KubernetesEverywhere />
         <CallToAction />
         <Environment />
         <Testimonials />
