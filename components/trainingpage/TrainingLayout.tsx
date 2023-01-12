@@ -42,6 +42,7 @@ export default function TrainingLayout({ content, meta }: Props) {
                 width="1500"
                 height="1500"
                 alt=""
+                priority
               />
               <h2 className="ml-4 text-center font-display self-center text-4xl tracking-tight text-white sm:text-6xl">
                 Školení {meta.name}

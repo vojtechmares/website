@@ -82,6 +82,7 @@ export function Hero() {
                             alt={company.name}
                             width={128}
                             height={64}
+                            priority
                           />
                         </li>
                       ))}
@@ -91,7 +92,7 @@ export function Hero() {
               </ul>
             </div>
           </div>
-          <Image className="pt-10 md:pt-0" width={400} height={800} src={avatarVojtechMares} alt="Vojtěch Mareš" />
+          <Image className="pt-10 md:pt-0" priority width={400} height={800} src={avatarVojtechMares} alt="Vojtěch Mareš" />
         </div>
       </Container>
     </>
